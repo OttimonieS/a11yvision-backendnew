@@ -31,7 +31,6 @@
 
 5. **Initialize Database**
    ```bash
-   cd backend/app
    python init_db.py
    ```
    (Answer 'y' for test data in development)
@@ -72,7 +71,7 @@
 
 3. **Initialize Database**
    - Open your web service shell on Render
-   - Run: `python backend/app/init_db.py`
+   - Run: `python init_db.py`
    - Answer 'n' for test data
 
 4. **Test**

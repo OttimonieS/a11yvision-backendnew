@@ -23,23 +23,25 @@ Backend API for the A11y Vision accessibility auditing platform. This FastAPI ap
 
 ```
 a11yvision-backend/
-├── backend/
-│   └── app/
-│       ├── main.py              # Main FastAPI application
-│       ├── api.py               # API route handlers
-│       ├── worker.py            # Background scan worker
-│       ├── analyzer.py          # Image analysis logic
-│       ├── database.py          # Database configuration
-│       ├── models.py            # SQLAlchemy models
-│       ├── activity_logger.py   # Activity logging
-│       ├── init_db.py          # Database initialization
-│       └── requirements.txt     # App-specific dependencies
-├── requirements.txt             # Root requirements file
-├── Dockerfile                   # Container definition
-├── docker-compose.yml          # Local development setup
-├── render.yaml                 # Render.com deployment config
-├── .env.example                # Environment variables template
-└── README.md                   # This file
+├── main.py              # Main FastAPI application
+├── api.py               # API route handlers
+├── worker.py            # Background scan worker
+├── analyzer.py          # Image analysis logic
+├── database.py          # Database configuration
+├── models.py            # SQLAlchemy models
+├── activity_logger.py   # Activity logging
+├── init_db.py          # Database initialization
+├── test_db_connection.py # Database testing
+├── requirements.txt     # Python dependencies
+├── runtime.txt         # Python version
+├── Dockerfile          # Container definition
+├── docker-compose.yml  # Local development setup
+├── render.yaml         # Render.com deployment config
+├── .env.example        # Environment variables template
+├── data/
+│   ├── screenshots/    # Screenshot storage
+│   └── uploads/        # Upload storage
+└── README.md           # This file
 ```
 
 ## Getting Started
@@ -77,13 +79,11 @@ a11yvision-backend/
 
 5. **Initialize database**
    ```bash
-   cd backend/app
    python init_db.py
    ```
 
 6. **Run the application**
    ```bash
-   cd backend/app
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
 

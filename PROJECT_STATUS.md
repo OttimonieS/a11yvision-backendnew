@@ -37,7 +37,7 @@ a11yvision-backend/
 │   ├── PRODUCT_SPEC.md        # Product specification
 │   └── IMPLEMENTATION_COMPLETE.md
 │
-└── 🔧 Backend Application (backend/app/)
+└── 🔧 Application Files
     ├── main.py                # FastAPI app & routes
     ├── api.py                 # Scan API logic
     ├── worker.py              # Background worker
@@ -47,7 +47,9 @@ a11yvision-backend/
     ├── activity_logger.py     # Activity logging
     ├── init_db.py            # DB initialization
     ├── test_db_connection.py # DB testing
-    └── requirements.txt       # App dependencies
+    └── data/
+        ├── screenshots/       # Screenshots
+        └── uploads/           # Uploads
 ```
 
 ---
