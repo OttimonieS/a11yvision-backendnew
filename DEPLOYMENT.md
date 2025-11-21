@@ -13,6 +13,7 @@
 ## Files Required for Render
 
 ### Root Directory Files
+
 - [x] `requirements.txt` - Python dependencies
 - [x] `runtime.txt` - Python version specification
 - [x] `Dockerfile` - Container configuration
@@ -25,6 +26,7 @@
 - [x] `build.sh` - Build script
 
 ### Backend Application Files
+
 - [x] `app/main.py` - FastAPI application
 - [x] `app/api.py` - API routes
 - [x] `app/worker.py` - Background worker
@@ -39,6 +41,7 @@
 ### Method 1: Blueprint (Recommended)
 
 1. **Push to GitHub**
+
    ```bash
    git add .
    git commit -m "Ready for Render deployment"
@@ -46,6 +49,7 @@
    ```
 
 2. **Create Blueprint on Render**
+
    - Go to https://dashboard.render.com/
    - Click "New" → "Blueprint"
    - Connect your GitHub repository
@@ -54,11 +58,13 @@
    - Click "Apply"
 
 3. **Wait for Deployment**
+
    - Database will be created first
    - Then the web service will build and deploy
    - Check logs for any errors
 
-3. **Initialize Database**
+4. **Initialize Database**
+
    - Once deployed, go to the web service shell
    - Run: `cd app && python init_db.py`
    - Answer 'n' for test data in production
@@ -70,19 +76,21 @@
 ### Method 2: Manual Setup
 
 1. **Create PostgreSQL Database**
+
    - New → PostgreSQL
    - Name: `a11yvision-db`
    - Plan: Free
    - Create Database
 
 2. **Create Web Service**
+
    - New → Web Service
    - Connect GitHub repo
-   - **Build Command**: 
+   - **Build Command**:
      ```
      pip install --upgrade pip && pip install -r requirements.txt && playwright install --with-deps chromium
      ```
-   - **Start Command**: 
+   - **Start Command**:
      ```
      bash start.sh
      ```
@@ -116,31 +124,40 @@ ALLOWED_ORIGINS=https://your-frontend.com,*
 ## Common Issues
 
 ### Playwright Browser Install Failed
+
 **Solution**: Ensure build command includes:
+
 ```
 playwright install --with-deps chromium
 ```
 
 ### Database Connection Error
-**Solution**: 
+
+**Solution**:
+
 - Check DATABASE_URL is set correctly
 - Ensure database is running
 - Run init_db.py to create tables
 
 ### Out of Memory
+
 **Solution**:
+
 - Render free tier has 512MB RAM
 - Upgrade to paid plan for production
 - Only install chromium browser (not all browsers)
 
 ### Module Import Errors
+
 **Solution**:
+
 - Ensure all dependencies are in requirements.txt
 - Check Python version in runtime.txt matches
 
 ## Monitoring
 
 After deployment, monitor:
+
 - Response times in Render dashboard
 - Error logs
 - Database connection pool
@@ -149,6 +166,7 @@ After deployment, monitor:
 ## Rollback Plan
 
 If deployment fails:
+
 1. Check logs in Render dashboard
 2. Fix issues locally
 3. Test with `docker-compose up`
@@ -158,6 +176,7 @@ If deployment fails:
 ## Success Criteria
 
 Deployment is successful when:
+
 - [x] Health endpoint returns `{"ok": true}`
 - [x] API docs are accessible
 - [x] Can create user account

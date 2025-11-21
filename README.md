@@ -56,35 +56,42 @@ a11yvision-backend/
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/a11yvision-backend.git
    cd a11yvision-backend
    ```
 
 2. **Create environment file**
+
    ```bash
    cp .env.example .env
    ```
+
    Edit `.env` with your configuration.
 
 3. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    playwright install chromium
    ```
 
 4. **Start PostgreSQL** (using Docker)
+
    ```bash
    docker-compose up -d postgres
    ```
 
 5. **Initialize database**
+
    ```bash
    cd app
    python init_db.py
    ```
 
 6. **Run the application**
+
    ```bash
    cd app
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
@@ -108,6 +115,7 @@ docker-compose up --build
 ### Method 1: Using render.yaml (Recommended)
 
 1. **Push your code to GitHub**
+
    ```bash
    git add .
    git commit -m "Prepare for Render deployment"
@@ -115,6 +123,7 @@ docker-compose up --build
    ```
 
 2. **Create a new Blueprint on Render**
+
    - Go to [Render Dashboard](https://dashboard.render.com/)
    - Click "New" → "Blueprint"
    - Connect your GitHub repository
@@ -131,6 +140,7 @@ docker-compose up --build
 ### Method 2: Manual Setup
 
 1. **Create PostgreSQL Database**
+
    - Go to Render Dashboard
    - Click "New" → "PostgreSQL"
    - Name: `a11yvision-db`
@@ -138,6 +148,7 @@ docker-compose up --build
    - Create database
 
 2. **Create Web Service**
+
    - Click "New" → "Web Service"
    - Connect your GitHub repository
    - Configure:
@@ -145,16 +156,17 @@ docker-compose up --build
      - **Environment**: `Python 3`
      - **Region**: Choose closest to your users
      - **Branch**: `main`
-     - **Build Command**: 
+     - **Build Command**:
        ```bash
        pip install -r requirements.txt && playwright install --with-deps chromium
        ```
-     - **Start Command**: 
+     - **Start Command**:
        ```bash
        cd backend/app && uvicorn main:app --host 0.0.0.0 --port $PORT
        ```
 
 3. **Add Environment Variables**
+
    - `DATABASE_URL`: (Auto-populated from database)
    - `PLAYWRIGHT_BROWSERS_PATH`: `/opt/render/.cache/ms-playwright`
    - `ENVIRONMENT`: `production`
@@ -168,27 +180,31 @@ docker-compose up --build
 
 4. **Initialize Database Tables**
    Access your Render shell and run:
+
    ```bash
    cd app && python init_db.py
    ```
 
-2. **Test Your API**
+5. **Test Your API**
+
    ```bash
    curl https://your-app-name.onrender.com/health
    ```
 
-3. **View Logs**
+6. **View Logs**
    Monitor logs in the Render dashboard under the "Logs" tab.
 
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/v1/auth/signup` - Create new account
 - `POST /api/v1/auth/signin` - Sign in
 - `POST /api/v1/auth/logout` - Sign out
 - `GET /api/v1/auth/me` - Get current user
 
 ### Scans
+
 - `GET /api/v1/scans` - List all scans
 - `POST /api/v1/scans` - Create new scan
 - `GET /api/v1/scans/{scan_id}` - Get scan status
@@ -196,47 +212,55 @@ docker-compose up --build
 - `GET /api/v1/scans/{scan_id}/issues` - Get issues only
 
 ### Settings
+
 - `GET /api/v1/settings` - Get user settings
 - `PUT /api/v1/settings` - Update settings
 
 ### API Keys
+
 - `GET /api/v1/api-keys` - List API keys
 - `POST /api/v1/api-keys` - Create new API key
 - `DELETE /api/v1/api-keys/{key_id}` - Delete API key
 
 ### Stats
+
 - `GET /api/v1/stats` - Get dashboard statistics
 
 ### Uploads
+
 - `POST /api/v1/uploads` - Upload screenshot
 
 ### Health
+
 - `GET /health` - Health check
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `DATABASE_URL` | PostgreSQL connection string | `postgresql://postgres:postgres@localhost:5432/visionai` |
-| `PLAYWRIGHT_BROWSERS_PATH` | Playwright browser cache path | `/ms-playwright` |
-| `ENVIRONMENT` | Environment (development/production) | `development` |
-| `ALLOWED_ORIGINS` | CORS allowed origins | `http://localhost:5173,*` |
-| `SECRET_KEY` | Application secret key | (generate securely) |
+| Variable                   | Description                          | Default                                                  |
+| -------------------------- | ------------------------------------ | -------------------------------------------------------- |
+| `DATABASE_URL`             | PostgreSQL connection string         | `postgresql://postgres:postgres@localhost:5432/visionai` |
+| `PLAYWRIGHT_BROWSERS_PATH` | Playwright browser cache path        | `/ms-playwright`                                         |
+| `ENVIRONMENT`              | Environment (development/production) | `development`                                            |
+| `ALLOWED_ORIGINS`          | CORS allowed origins                 | `http://localhost:5173,*`                                |
+| `SECRET_KEY`               | Application secret key               | (generate securely)                                      |
 
 ## Development
 
 ### Running Tests
+
 ```bash
 pytest
 ```
 
 ### Code Formatting
+
 ```bash
 black backend/app
 isort backend/app
 ```
 
 ### Database Migrations
+
 ```bash
 alembic revision --autogenerate -m "Description"
 alembic upgrade head
@@ -245,15 +269,18 @@ alembic upgrade head
 ## Troubleshooting
 
 ### Playwright Issues on Render
+
 - Ensure `playwright install --with-deps chromium` is in build command
 - Set `PLAYWRIGHT_BROWSERS_PATH=/opt/render/.cache/ms-playwright`
 
 ### Database Connection Issues
+
 - Verify `DATABASE_URL` environment variable is set correctly
 - Check database is running and accessible
 - Ensure PostgreSQL version compatibility (15+)
 
 ### Memory Issues
+
 - Render free tier has 512MB RAM limit
 - Consider upgrading to a paid plan for production use
 - Optimize Playwright to use `chromium` only (not full browser suite)
@@ -273,6 +300,7 @@ This project is licensed under the MIT License.
 ## Support
 
 For issues and questions:
+
 - Create an issue on GitHub
 - Check the documentation at `/docs` endpoint
 - Review Render.com deployment logs

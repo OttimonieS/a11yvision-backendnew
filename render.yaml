@@ -6,7 +6,7 @@ services:
     databaseName: visionai
     databaseUser: postgres
     region: oregon
-    
+
   # FastAPI Backend
   - type: web
     name: a11yvision-backend
