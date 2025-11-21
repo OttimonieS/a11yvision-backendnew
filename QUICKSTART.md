@@ -31,12 +31,14 @@
 
 5. **Initialize Database**
    ```bash
+   cd app
    python init_db.py
    ```
    (Answer 'y' for test data in development)
 
 6. **Run Application**
    ```bash
+   cd app
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
 
@@ -71,7 +73,7 @@
 
 3. **Initialize Database**
    - Open your web service shell on Render
-   - Run: `python init_db.py`
+   - Run: `cd app && python init_db.py`
    - Answer 'n' for test data
 
 4. **Test**

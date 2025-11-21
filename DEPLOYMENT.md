@@ -25,15 +25,14 @@
 - [x] `build.sh` - Build script
 
 ### Backend Application Files
-- [x] `main.py` - FastAPI application
-- [x] `api.py` - API routes
-- [x] `worker.py` - Background worker
-- [x] `analyzer.py` - Image analysis
-- [x] `database.py` - Database config
-- [x] `models.py` - SQLAlchemy models
-- [x] `activity_logger.py` - Activity logging
-- [x] `init_db.py` - Database initialization
-- [x] `requirements.txt` - Dependencies
+- [x] `app/main.py` - FastAPI application
+- [x] `app/api.py` - API routes
+- [x] `app/worker.py` - Background worker
+- [x] `app/analyzer.py` - Image analysis
+- [x] `app/database.py` - Database config
+- [x] `app/models.py` - SQLAlchemy models
+- [x] `app/activity_logger.py` - Activity logging
+- [x] `app/init_db.py` - Database initialization
 
 ## Render.com Deployment Steps
 
@@ -61,7 +60,7 @@
 
 3. **Initialize Database**
    - Once deployed, go to the web service shell
-   - Run: `python init_db.py`
+   - Run: `cd app && python init_db.py`
    - Answer 'n' for test data in production
 
 5. **Test Your API**

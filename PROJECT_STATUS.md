@@ -37,7 +37,7 @@ a11yvision-backend/
 │   ├── PRODUCT_SPEC.md        # Product specification
 │   └── IMPLEMENTATION_COMPLETE.md
 │
-└── 🔧 Application Files
+└── 🔧 Application Files (app/)
     ├── main.py                # FastAPI app & routes
     ├── api.py                 # Scan API logic
     ├── worker.py              # Background worker
