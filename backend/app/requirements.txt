@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+playwright
+pydantic
+email-validator
+requests
+python-multipart
+opencv-python-headless
+numpy
+pillow
+python-dotenv
+pytesseract
+sqlalchemy
+psycopg2-binary
+alembic
