@@ -3,8 +3,10 @@
 ## Issues Resolved
 
 ### 1. **Scan Status Always Showing "Error"**
+
 **Root Cause**: NumPy int64 values cannot be serialized to JSON
-**Solution**: 
+**Solution**:
+
 - Converted all NumPy int64 values to Python int in `analyzer.py`
 - Fixed in `get_dominant_colors()` function for color tuples
 - Fixed in bbox coordinates (x, y, w, h)
@@ -12,24 +14,31 @@
 - Fixed in position values (x_px, y_px, width, height)
 
 **Files Modified**:
+
 - `app/analyzer.py`
 
 ### 2. **Duplicate Data/Screenshots Folders**
+
 **Root Cause**: `Path.cwd()` was resolving to different directories depending on where the script was run
 **Solution**:
+
 - Changed worker.py to use `Path(__file__).parent.parent` (project root) instead of `Path.cwd()`
 - Removed duplicate `app/data/` folder
 - Consolidated all screenshots to `data/screenshots/` at project root
 
 **Files Modified**:
+
 - `app/worker.py`
 
 **Files Deleted**:
+
 - `app/data/screenshots/` (duplicate folder)
 - `app/data/uploads/` (duplicate folder)
 
 ### 3. **Two .env Files**
+
 **Status**: This is correct!
+
 - `.env` = Your actual environment variables (contains real credentials)
 - `.env.example` = Template file for other developers (no real credentials)
 
@@ -42,6 +51,7 @@
 ✅ **Screenshot Path**: Consistent location at `data/screenshots/`
 ✅ **Error Handling**: Comprehensive error logging in place
 ✅ **Dependencies**: All packages installed correctly
+✅ **Deployed**: Live at `api.a11yvision.labnexus.my.id`
 
 ## Test Results
 
@@ -72,17 +82,20 @@ a11yvision-backendnew/
 ## How to Use
 
 ### Start the Server
+
 ```bash
 cd app
 python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ### Test Scan Functionality
+
 ```bash
 python test_quick_scan.py
 ```
 
 ### Monitor Scan Status
+
 ```bash
 python test_scan_status.py
 ```
@@ -107,6 +120,7 @@ python test_scan_status.py
 ## Next Steps
 
 Your backend is now fully functional. You can:
+
 1. Start the server with `uvicorn`
 2. Connect your frontend
 3. Begin scanning websites
