@@ -60,10 +60,7 @@ def check_opencv():
     """Check if OpenCV is installed."""
     try:
         import cv2  # type: ignore
-        try:
-            print(f"✅ OpenCV is installed (version: {cv2.__version__})")
-        except:
-            print(f"✅ OpenCV is installed")
+        print(f"✅ OpenCV is installed")
         return True
     except ImportError:
         print("❌ OpenCV (cv2) is not installed")
