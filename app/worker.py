@@ -135,8 +135,6 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 
 	try:
 		with sync_playwright() as p:
-	try:
-		with sync_playwright() as p:
 			browser = p.chromium.launch(headless=True)
 			context = browser.new_context(viewport={'width': 1280, 'height': 800})
 			page = context.new_page()
