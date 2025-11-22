@@ -3,6 +3,7 @@
 ## What Was The Problem?
 
 Previously, the scan results were **ambiguous and not detailed**:
+
 - Only showed basic bounding box coordinates: `BBox: [51, 319, 63, 22]`
 - No information about **what element** had the issue
 - No explanation of **why** it was an issue
@@ -11,12 +12,14 @@ Previously, the scan results were **ambiguous and not detailed**:
 - Low confidence scores (0.5-0.6%)
 
 **Example of OLD output:**
+
 ```
 majorlow-contrast
 1.4.3
 Confidence: 0.6%
 BBox: [51, 319, 63, 22]
 ```
+
 ❌ This tells you almost nothing useful!
 
 ## What's Now Fixed?
@@ -24,6 +27,7 @@ BBox: [51, 319, 63, 22]
 ### ✅ 1. Detailed Issue Information
 
 **NEW Output Example:**
+
 ```json
 {
   "id": "A11Y-LOWCON-0",
@@ -32,7 +36,7 @@ BBox: [51, 319, 63, 22]
   "confidence": 0.75,
   "wcag": ["1.4.3", "1.4.6"],
   "message": "Element: button (.submit-btn) containing \"Submit\". Low contrast detected (ratio: 2.31:1). Fails WCAG AA (requires 4.5:1 minimum). Foreground: RGB(150, 150, 150), Background: RGB(200, 200, 200). Location: 45.2% from left, 60.3% from top. Recommendation: Increase contrast between text and background to at least 4.5:1 for normal text or 3:1 for large text (18pt+).",
-  "bbox": {"x": 51, "y": 319, "w": 63, "h": 22},
+  "bbox": { "x": 51, "y": 319, "w": 63, "h": 22 },
   "details": {
     "contrast_ratio": 2.31,
     "foreground_color": [150, 150, 150],
@@ -71,6 +75,7 @@ BBox: [51, 319, 63, 22]
 ### ✅ 2. Know EXACTLY Where Issues Are
 
 **Multiple location indicators:**
+
 - ✅ **Percentage position**: "45.2% from left, 60.3% from top"
 - ✅ **Pixel coordinates**: (51, 319)
 - ✅ **CSS Selector**: `button.submit-btn`
@@ -78,6 +83,7 @@ BBox: [51, 319, 63, 22]
 - ✅ **Visual marker**: On annotated screenshot
 
 **You can now:**
+
 1. Open DevTools
 2. Use the CSS selector to find the exact element
 3. See the element's text content
@@ -86,12 +92,14 @@ BBox: [51, 319, 63, 22]
 ### ✅ 3. Understand WHY It's an Issue
 
 **For Low Contrast:**
+
 - Actual contrast ratio: `2.31:1`
 - Required ratio: `4.5:1` (WCAG AA)
 - Exact colors: `RGB(150, 150, 150)` vs `RGB(200, 200, 200)`
 - Pass/fail for both AA and AAA levels
 
 **For Small Targets:**
+
 - Current size: `28×32px`
 - Required minimum: `24×24px` (WCAG 2.5.8)
 - Recommended size: `44×44px` (mobile-friendly)
@@ -102,12 +110,14 @@ BBox: [51, 319, 63, 22]
 Every issue includes **actionable steps**:
 
 **Example for Contrast Issue:**
+
 1. Use a color contrast checker tool to find compliant color combinations
 2. Darken the text color or lighten the background color
 3. Consider using bold text to improve readability
 4. Test with different color blindness simulations
 
 **Example for Target Size Issue:**
+
 1. Add CSS padding to increase the clickable area
 2. Use min-width and min-height CSS properties
 3. Ensure adequate spacing (at least 8px) between adjacent targets
@@ -119,12 +129,14 @@ Every issue includes **actionable steps**:
 **Three types of reports generated:**
 
 1. **Annotated Screenshot** (`screenshot_annotated.png`)
+
    - Bounding boxes around each issue
    - Color-coded by severity (red/orange/yellow)
    - Issue numbers and labels
    - Legend with counts
 
 2. **HTML Report** (`report.html`)
+
    - Professional, readable format
    - Summary dashboard
    - Detailed issue cards
@@ -142,6 +154,7 @@ Every issue includes **actionable steps**:
 **OLD:** Generic "major" and "minor"
 
 **NEW:** Context-aware severity:
+
 - **Critical**: Contrast < 3:1 (completely unreadable)
 - **Serious**: Contrast 3-4.5:1 or target < 24px (fails WCAG AA)
 - **Minor**: Contrast 4.5-7:1 or target 24-44px (passes AA, fails AAA)
@@ -150,7 +163,8 @@ Every issue includes **actionable steps**:
 
 **OLD:** 0.5-0.6% confidence (very uncertain)
 
-**NEW:** 
+**NEW:**
+
 - 75% for contrast calculations (based on actual color analysis)
 - 65% for target size detection
 - Confidence based on detection method quality
@@ -158,6 +172,7 @@ Every issue includes **actionable steps**:
 ## Comparison: Before vs After
 
 ### BEFORE (Ambiguous):
+
 ```
 minortarget-size
 2.5.8
@@ -166,6 +181,7 @@ BBox: [512, 556, 28, 21]
 ```
 
 ### AFTER (Detailed):
+
 ```
 Issue: Small Interactive Target
 
@@ -190,6 +206,7 @@ Confidence: 65%
 ## Files Changed
 
 1. **`app/analyzer.py`** - Enhanced with:
+
    - Contrast ratio calculation
    - Color analysis (RGB extraction)
    - Position percentage calculation
@@ -197,6 +214,7 @@ Confidence: 65%
    - WCAG compliance checking
 
 2. **`app/worker.py`** - Enhanced with:
+
    - DOM element extraction
    - Element-to-issue matching
    - Page metadata collection
@@ -204,11 +222,13 @@ Confidence: 65%
    - Summary statistics
 
 3. **`app/models.py`** - Updated:
+
    - `details` field for extended information
    - `wcag` as JSON array
    - Support for all new data
 
 4. **`app/visualizer.py`** - NEW:
+
    - Annotated screenshot generation
    - HTML report generation
    - Color-coded visual markers
@@ -222,6 +242,7 @@ Confidence: 65%
 ## How to Use
 
 ### Basic Scan:
+
 ```python
 from app.worker import run_scan
 
@@ -235,6 +256,7 @@ print(f"Found {result['summary']['total_issues']} issues")
 ```
 
 ### Test It:
+
 ```bash
 python test_enhanced_scan.py
 # Enter a URL when prompted
@@ -242,14 +264,14 @@ python test_enhanced_scan.py
 
 ## What This Means for You
 
-✅ **No more ambiguous results** - You know exactly what and where  
-✅ **Actionable guidance** - Step-by-step fix instructions  
-✅ **Visual context** - See issues on actual screenshot  
-✅ **Professional reports** - Share with team/clients  
-✅ **WCAG compliance** - Know which standards are met/failed  
-✅ **Element identification** - Find exact elements in code  
-✅ **Better prioritization** - Clear severity levels  
-✅ **Higher confidence** - More accurate detection  
+✅ **No more ambiguous results** - You know exactly what and where
+✅ **Actionable guidance** - Step-by-step fix instructions
+✅ **Visual context** - See issues on actual screenshot
+✅ **Professional reports** - Share with team/clients
+✅ **WCAG compliance** - Know which standards are met/failed
+✅ **Element identification** - Find exact elements in code
+✅ **Better prioritization** - Clear severity levels
+✅ **Higher confidence** - More accurate detection
 
 ## Next Steps
 

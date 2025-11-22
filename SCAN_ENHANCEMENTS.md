@@ -1,12 +1,15 @@
 # Enhanced Accessibility Scanning Features
 
 ## Overview
+
 The accessibility scanner has been significantly enhanced to provide detailed, actionable insights about accessibility issues on websites.
 
 ## What's New
 
 ### 1. Detailed Issue Information
+
 Each issue now includes:
+
 - **Precise location**: Pixel coordinates and percentage positions
 - **Element identification**: CSS selectors, tags, and text content
 - **Severity levels**: Critical, Serious, Minor
@@ -14,7 +17,9 @@ Each issue now includes:
 - **WCAG criteria**: Which specific WCAG guidelines are violated
 
 ### 2. Low Contrast Detection
+
 For contrast issues, you now get:
+
 - **Actual contrast ratio** (e.g., 2.3:1)
 - **Foreground and background colors** (RGB values)
 - **WCAG compliance status** (AA and AAA levels)
@@ -22,6 +27,7 @@ For contrast issues, you now get:
 - **How to fix** with specific recommendations
 
 **Example Output:**
+
 ```json
 {
   "id": "A11Y-LOWCON-0",
@@ -57,7 +63,9 @@ For contrast issues, you now get:
 ```
 
 ### 3. Target Size Detection
+
 For small interactive elements, you get:
+
 - **Current dimensions** (width × height in pixels)
 - **Required vs recommended sizes** (24×24px minimum, 44×44px recommended)
 - **Shortage calculation** (how many pixels too small)
@@ -65,6 +73,7 @@ For small interactive elements, you get:
 - **Touch target improvements** needed
 
 **Example Output:**
+
 ```json
 {
   "id": "A11Y-SMALLTARGET-5",
@@ -72,10 +81,10 @@ For small interactive elements, you get:
   "severity": "serious",
   "message": "Element: a (#nav-link) containing \"Home\". Small interactive target detected (28×32px). WCAG 2.5.8 requires minimum 24×24px, recommended 44×44px for touch targets. Current target is 16px too narrow and 12px too short.",
   "details": {
-    "current_size": {"width": 28, "height": 32},
-    "required_size": {"width": 24, "height": 24},
-    "recommended_size": {"width": 44, "height": 44},
-    "shortage": {"width": 16, "height": 12},
+    "current_size": { "width": 28, "height": 32 },
+    "required_size": { "width": 24, "height": 24 },
+    "recommended_size": { "width": 44, "height": 44 },
+    "shortage": { "width": 16, "height": 12 },
     "element": {
       "selector": "a#nav-link",
       "tag": "a",
@@ -96,12 +105,14 @@ For small interactive elements, you get:
 ### 4. Visual Reports
 
 #### Annotated Screenshots
+
 - Bounding boxes drawn around each issue
 - Color-coded by severity (red = critical, orange = serious, yellow = minor)
 - Issue numbers and types labeled
 - Legend showing issue counts by severity
 
 #### HTML Reports
+
 - Professional, readable format
 - Summary dashboard with counts
 - Detailed issue cards with all information
@@ -111,6 +122,7 @@ For small interactive elements, you get:
 ### 5. Enhanced Scan Results
 
 The scan now returns:
+
 ```json
 {
   "url": "https://example.com",
@@ -141,11 +153,13 @@ The scan now returns:
 ## How Issues Are Now Categorized
 
 ### Severity Levels
+
 - **Critical**: Contrast ratio < 3:1, completely inaccessible
 - **Serious**: Contrast ratio 3-4.5:1, target size < 24px
 - **Minor**: Contrast ratio 4.5-7:1 (fails AAA), target size 24-44px
 
 ### Confidence Scores
+
 - **0.75**: High confidence (contrast calculations)
 - **0.65**: Moderate confidence (target size detection)
 - **0.50**: Lower confidence (heuristic-based detection)
@@ -153,6 +167,7 @@ The scan now returns:
 ## Where Issues Are Located
 
 Each issue includes multiple location indicators:
+
 1. **Absolute pixel coordinates**: `(x, y)` from top-left
 2. **Percentage position**: `45% from left, 60% from top`
 3. **Element selector**: CSS selector for direct targeting
@@ -161,14 +176,15 @@ Each issue includes multiple location indicators:
 
 ## Files Generated Per Scan
 
-1. **screenshot_{hash}.png** - Original full-page screenshot
-2. **screenshot_{hash}_annotated.png** - Screenshot with issue markers
-3. **report_{hash}.json** - Complete data in JSON format
-4. **report_{hash}.html** - Human-readable HTML report
+1. **screenshot\_{hash}.png** - Original full-page screenshot
+2. **screenshot\_{hash}\_annotated.png** - Screenshot with issue markers
+3. **report\_{hash}.json** - Complete data in JSON format
+4. **report\_{hash}.html** - Human-readable HTML report
 
 ## API Changes
 
 The Issue model now stores:
+
 - `details` (JSON): All enhanced information
 - `wcag` (JSON array): Multiple WCAG criteria
 - `message` (Text): Full descriptive message
@@ -176,18 +192,21 @@ The Issue model now stores:
 ## Using the Reports
 
 ### For Developers
+
 1. Open the JSON report for programmatic access
 2. Use the CSS selectors to locate exact elements
 3. Follow the "how_to_fix" recommendations
 4. Check contrast ratios with the provided RGB values
 
 ### For Designers
+
 1. Open the HTML report in a browser
 2. View the annotated screenshot
 3. Read the detailed explanations
 4. Use the color values to adjust designs
 
 ### For QA/Testing
+
 1. Compare issue counts over time
 2. Verify fixes by rescanning
 3. Export reports for documentation
@@ -217,6 +236,7 @@ for issue in result['issues']:
 ## Future Enhancements
 
 Planned improvements:
+
 - [ ] Keyboard navigation testing
 - [ ] Screen reader compatibility checks
 - [ ] Form label validation

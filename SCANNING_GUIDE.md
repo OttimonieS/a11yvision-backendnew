@@ -3,6 +3,7 @@
 ## Running a Scan
 
 ### Basic Usage
+
 ```python
 from app.worker import run_scan
 
@@ -32,16 +33,16 @@ result = run_scan("https://example.com")
 
 ### Every Issue Contains
 
-| Field | Description | Example |
-|-------|-------------|---------|
-| `id` | Unique identifier | `"A11Y-LOWCON-0"` |
-| `rule` | Type of issue | `"low-contrast"` or `"target-size"` |
-| `severity` | Impact level | `"critical"`, `"serious"`, `"minor"` |
-| `wcag` | WCAG criteria violated | `["1.4.3", "1.4.6"]` |
-| `confidence` | Detection confidence | `0.75` (75%) |
-| `message` | Full description | See examples below |
-| `bbox` | Bounding box | `{x: 100, y: 200, w: 300, h: 50}` |
-| `details` | Extended information | See below |
+| Field        | Description            | Example                              |
+| ------------ | ---------------------- | ------------------------------------ |
+| `id`         | Unique identifier      | `"A11Y-LOWCON-0"`                    |
+| `rule`       | Type of issue          | `"low-contrast"` or `"target-size"`  |
+| `severity`   | Impact level           | `"critical"`, `"serious"`, `"minor"` |
+| `wcag`       | WCAG criteria violated | `["1.4.3", "1.4.6"]`                 |
+| `confidence` | Detection confidence   | `0.75` (75%)                         |
+| `message`    | Full description       | See examples below                   |
+| `bbox`       | Bounding box           | `{x: 100, y: 200, w: 300, h: 50}`    |
+| `details`    | Extended information   | See below                            |
 
 ### Low Contrast Issue Details
 
@@ -96,16 +97,19 @@ result = run_scan("https://example.com")
 ## Understanding Severity Levels
 
 ### Critical
+
 - **Contrast ratio < 3:1** - Extremely hard to read
 - **Immediate action required**
 - Affects users with low vision and color blindness
 
 ### Serious
+
 - **Contrast ratio 3:1 - 4.5:1** - Fails WCAG AA
 - **Target size < 24px** - Too small for touch/click
 - Affects mobile users and users with motor disabilities
 
 ### Minor
+
 - **Contrast ratio 4.5:1 - 7:1** - Passes AA, fails AAA
 - **Target size 24-44px** - Meets minimum, but not ideal
 - Minor improvements recommended
@@ -134,23 +138,24 @@ element['selector']    # "button.submit-btn"
 
 ### Contrast Requirements
 
-| Text Size | WCAG AA | WCAG AAA |
-|-----------|---------|----------|
-| Normal text (< 18pt) | 4.5:1 | 7:1 |
-| Large text (≥ 18pt) | 3:1 | 4.5:1 |
-| UI components | 3:1 | - |
+| Text Size            | WCAG AA | WCAG AAA |
+| -------------------- | ------- | -------- |
+| Normal text (< 18pt) | 4.5:1   | 7:1      |
+| Large text (≥ 18pt)  | 3:1     | 4.5:1    |
+| UI components        | 3:1     | -        |
 
 ### Target Size Requirements
 
-| Standard | Minimum Size | Notes |
-|----------|-------------|-------|
-| WCAG 2.5.8 (AA) | 24×24px | Level AA requirement |
-| Mobile Best Practice | 44×44px | Apple/Google guidelines |
-| Recommended | 44×44px + 8px spacing | Optimal for all users |
+| Standard             | Minimum Size          | Notes                   |
+| -------------------- | --------------------- | ----------------------- |
+| WCAG 2.5.8 (AA)      | 24×24px               | Level AA requirement    |
+| Mobile Best Practice | 44×44px               | Apple/Google guidelines |
+| Recommended          | 44×44px + 8px spacing | Optimal for all users   |
 
 ## Working with Reports
 
 ### JSON Report
+
 ```python
 import json
 
@@ -163,6 +168,7 @@ for issue in data['issues']:
 ```
 
 ### HTML Report
+
 - Open in any browser
 - Professional layout
 - All details included
@@ -170,6 +176,7 @@ for issue in data['issues']:
 - Shareable
 
 ### Annotated Screenshot
+
 - Visual representation
 - Color-coded by severity:
   - 🔴 Red = Critical
@@ -180,11 +187,13 @@ for issue in data['issues']:
 ## Common Queries
 
 ### How many critical issues?
+
 ```python
 critical_count = result['summary']['critical']
 ```
 
 ### What issues are at a specific location?
+
 ```python
 issues_at_top = [
     i for i in result['issues']
@@ -193,6 +202,7 @@ issues_at_top = [
 ```
 
 ### Which elements have contrast issues?
+
 ```python
 contrast_issues = [
     i for i in result['issues']
@@ -205,6 +215,7 @@ for issue in contrast_issues:
 ```
 
 ### Get all selectors with issues?
+
 ```python
 selectors = [
     i['details']['element']['selector']
@@ -216,12 +227,14 @@ selectors = [
 ## Fixing Issues
 
 ### For Contrast Issues
+
 1. Check the RGB values provided
 2. Use contrast ratio calculator
 3. Adjust colors to meet 4.5:1 minimum
 4. Rescan to verify
 
 ### For Target Size Issues
+
 1. Note current size and shortage
 2. Add CSS padding or min-width/height
 3. Ensure 8px spacing between targets

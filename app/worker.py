@@ -17,11 +17,11 @@ def extract_page_elements(page) -> List[Dict]:
 			() => {
 				const interactiveSelectors = 'a, button, input, select, textarea, [role="button"], [role="link"], [onclick]';
 				const elements = Array.from(document.querySelectorAll(interactiveSelectors));
-				
+
 				return elements.map((el, index) => {
 					const rect = el.getBoundingClientRect();
 					const styles = window.getComputedStyle(el);
-					
+
 					// Get element path
 					const getPath = (element) => {
 						if (element.id) return '#' + element.id;
@@ -31,7 +31,7 @@ def extract_page_elements(page) -> List[Dict]:
 						}
 						return element.tagName.toLowerCase();
 					};
-					
+
 					return {
 						index: index,
 						selector: getPath(el),
@@ -71,7 +71,7 @@ def enrich_issues_with_elements(issues: List[Dict], page_elements: List[Dict]) -
 		issue_y = bbox.get('y', 0)
 		issue_w = bbox.get('w', 0)
 		issue_h = bbox.get('h', 0)
-		
+
 		# Find overlapping elements
 		matching_elements = []
 		for element in page_elements:
@@ -80,32 +80,32 @@ def enrich_issues_with_elements(issues: List[Dict], page_elements: List[Dict]) -
 			el_y = el_bbox.get('y', 0)
 			el_w = el_bbox.get('width', 0)
 			el_h = el_bbox.get('height', 0)
-			
+
 			# Check if bounding boxes overlap
 			if (issue_x < el_x + el_w and issue_x + issue_w > el_x and
 				issue_y < el_y + el_h and issue_y + issue_h > el_y):
 				matching_elements.append(element)
-		
+
 		# Add element information to issue
 		if matching_elements:
 			# Take the first matching element (most likely candidate)
 			element = matching_elements[0]
-			
+
 			# Enhance the message with element details
 			element_desc = f"{element.get('tag', 'element')}"
 			if element.get('selector'):
 				element_desc += f" ({element.get('selector')})"
 			if element.get('text'):
 				element_desc += f" containing \"{element.get('text')[:50]}\""
-			
+
 			# Add to existing message
 			if 'message' in issue:
 				issue['message'] = f"Element: {element_desc}. " + issue['message']
-			
+
 			# Add element details
 			if 'details' not in issue:
 				issue['details'] = {}
-			
+
 			issue['details']['element'] = {
 				'selector': element.get('selector', ''),
 				'tag': element.get('tag', ''),
@@ -116,7 +116,7 @@ def enrich_issues_with_elements(issues: List[Dict], page_elements: List[Dict]) -
 				'type': element.get('type', ''),
 				'computed_styles': element.get('styles', {})
 			}
-	
+
 	return issues
 
 
@@ -133,10 +133,10 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 		page = context.new_page()
 		page.goto(url, timeout=30000)
 		page.wait_for_load_state('networkidle', timeout=10000)
-		
+
 		# Extract page elements for detailed analysis
 		page_elements = extract_page_elements(page)
-		
+
 		# Get page metadata
 		page_info = page.evaluate("""
 			() => ({
@@ -150,22 +150,22 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 				}
 			})
 		""")
-		
+
 		# full page screenshot
 		buffer = page.screenshot(full_page=True)
 		img = Image.open(BytesIO(buffer))
-		
+
 		# Run analysis
 		issues = analyze_image(img, page_elements)
-		
+
 		# Enrich issues with element information
 		issues = enrich_issues_with_elements(issues, page_elements)
-		
+
 		# save screenshot
 		screenshot_path = out_dir / f"screenshot_{abs(hash(url))}.png"
 		with open(screenshot_path, 'wb') as f:
 			f.write(buffer)
-		
+
 		# Save detailed report
 		report_path = out_dir / f"report_{abs(hash(url))}.json"
 		with open(report_path, 'w', encoding='utf-8') as f:
@@ -176,13 +176,13 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 				'elements_analyzed': len(page_elements),
 				'screenshot_path': str(screenshot_path)
 			}, f, indent=2, ensure_ascii=False)
-		
+
 		# Generate annotated screenshot with issue markers
 		annotated_path = None
 		html_report_path = None
 		try:
 			annotated_path = draw_issue_overlay(str(screenshot_path), issues)
-			
+
 			# Generate HTML report
 			html_report = generate_issue_report_html(issues, str(screenshot_path), page_info)
 			html_report_path = out_dir / f"report_{abs(hash(url))}.html"
@@ -190,7 +190,7 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 				f.write(html_report)
 		except Exception as e:
 			print(f"Error generating visualizations: {e}")
-		
+
 		browser.close()
 
 	return {

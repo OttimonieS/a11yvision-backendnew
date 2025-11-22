@@ -20,13 +20,13 @@ def calculate_contrast_ratio(color1, color2):
 			else:
 				rgb_linear.append(((c + 0.055) / 1.055) ** 2.4)
 		return 0.2126 * rgb_linear[0] + 0.7152 * rgb_linear[1] + 0.0722 * rgb_linear[2]
-	
+
 	l1 = get_luminance(color1)
 	l2 = get_luminance(color2)
-	
+
 	lighter = max(l1, l2)
 	darker = min(l1, l2)
-	
+
 	return (lighter + 0.05) / (darker + 0.05)
 
 
@@ -37,7 +37,7 @@ def get_dominant_colors(img_region):
 	mean_color = np.mean(pixels, axis=0).astype(int)
 	min_color = np.min(pixels, axis=0).astype(int)
 	max_color = np.max(pixels, axis=0).astype(int)
-	
+
 	# Return the two most contrasting
 	return tuple(max_color), tuple(min_color)
 
@@ -46,7 +46,7 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 	"""
 	Enhanced accessibility analyzer with detailed issue reporting.
 	Detects low contrast regions and small interactive elements with comprehensive details.
-	
+
 	Args:
 		pil_img: PIL Image to analyze
 		page_elements: Optional list of DOM elements from page analysis with structure:
@@ -69,31 +69,31 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 	contours, _ = cv2.findContours(low_contrast_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 	issues = []
-	
+
 	# Analyze low contrast issues
 	for i, cnt in enumerate(contours):
 		x, y, cw, ch = cv2.boundingRect(cnt)
 		area = cw * ch
 		if area < 500:  # skip small noise
 			continue
-		
+
 		# Extract the region to analyze colors
 		region = img[y:y+ch, x:x+cw]
 		if region.size == 0:
 			continue
-			
+
 		# Get dominant colors and calculate contrast ratio
 		fg_color, bg_color = get_dominant_colors(region)
 		contrast_ratio = calculate_contrast_ratio(fg_color, bg_color)
-		
+
 		# Determine WCAG compliance
 		wcag_aa_pass = contrast_ratio >= 4.5
 		wcag_aaa_pass = contrast_ratio >= 7.0
-		
+
 		# Calculate position percentages
 		x_percent = round((x / width) * 100, 1)
 		y_percent = round((y / height) * 100, 1)
-		
+
 		# Build detailed message
 		message = f"Low contrast detected (ratio: {contrast_ratio:.2f}:1). "
 		if not wcag_aa_pass:
@@ -103,7 +103,7 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 		message += f"Foreground: RGB{fg_color}, Background: RGB{bg_color}. "
 		message += f"Location: {x_percent}% from left, {y_percent}% from top. "
 		message += f"Recommendation: Increase contrast between text and background to at least 4.5:1 for normal text or 3:1 for large text (18pt+)."
-		
+
 		issues.append({
 			'id': f'A11Y-LOWCON-{i}',
 			'rule': 'low-contrast',
@@ -140,32 +140,32 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 	# Look for button-like or link-like elements
 	edges = cv2.Canny(gray, 50, 150)
 	contours2, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-	
+
 	# Also detect bright/dark clickable-looking regions
 	_, bw_bright = cv2.threshold(gray, 220, 255, cv2.THRESH_BINARY)
 	_, bw_dark = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY_INV)
 	combined = cv2.bitwise_or(bw_bright, bw_dark)
 	contours3, _ = cv2.findContours(combined, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-	
+
 	all_potential_targets = list(contours2) + list(contours3)
-	
+
 	for j, cnt in enumerate(all_potential_targets):
 		x, y, cw, ch = cv2.boundingRect(cnt)
-		
+
 		# WCAG 2.5.8: Target size should be at least 24x24 CSS pixels
 		# We'll flag anything smaller than 44x44px (mobile-friendly guideline)
 		min_dimension = min(cw, ch)
-		
+
 		if 8 < cw < 44 or 8 < ch < 44:
 			# Calculate how much it falls short
 			target_size = 44
 			width_shortage = max(0, target_size - cw)
 			height_shortage = max(0, target_size - ch)
-			
+
 			# Position information
 			x_percent = round((x / width) * 100, 1)
 			y_percent = round((y / height) * 100, 1)
-			
+
 			# Determine severity based on size
 			if min_dimension < 24:
 				severity = 'serious'
@@ -173,13 +173,13 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 			else:
 				severity = 'minor'
 				wcag_level = 'AAA (Enhanced)'
-			
+
 			message = f"Small interactive target detected ({cw}x{ch}px). "
 			message += f"WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. "
 			message += f"Current target is {width_shortage}px too narrow and {height_shortage}px too short. "
 			message += f"Location: {x_percent}% from left, {y_percent}% from top. "
 			message += f"Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing."
-			
+
 			issues.append({
 				'id': f'A11Y-SMALLTARGET-{j}',
 				'rule': 'target-size',
