@@ -251,24 +251,38 @@ async def get_scan_status(scan_id: str):
 	data = SCANS.get(scan_id)
 	if not data:
 		return {'scanId': scan_id, 'status': 'not_found'}
+	
+	# Make a copy to avoid modifying the original
+	response = dict(data)
+	
 	# summarize if results exist
 	result = data.get('result')
 	if result and 'issues' in result:
 		issues = result['issues']
-		data['resultSummary'] = {
+		response['resultSummary'] = {
 			'coverage': 72,
 			'issuesCount': len(issues),
 			'critical': sum(1 for i in issues if i.get('severity') == 'critical'),
 			'major': sum(1 for i in issues if i.get('severity') == 'major'),
 			'minor': sum(1 for i in issues if i.get('severity') == 'minor'),
 		}
-		data['progress'] = {
+		response['progress'] = {
 			'render': 'done',
 			'preprocess': 'done',
 			'inference': 'done',
 			'aggregate': 'done',
 		}
-	return data
+	
+	# If status is running, update progress to show activity
+	if data.get('status') == 'running':
+		response['progress'] = {
+			'render': 'running',
+			'preprocess': 'pending',
+			'inference': 'pending',
+			'aggregate': 'pending',
+		}
+	
+	return response
 
 
 @app.get('/api/v1/scans/{scan_id}/result')
@@ -320,3 +334,37 @@ async def upload_screenshot(file: UploadFile = File(...)):
 @app.get('/health')
 async def health():
 	return {'ok': True}
+
+
+@app.get('/api/v1/debug/scans')
+async def debug_scans():
+	"""Debug endpoint to see all scans and their current state."""
+	import threading
+	
+	active_threads = [
+		{
+			'name': t.name,
+			'alive': t.is_alive(),
+			'daemon': t.daemon,
+		}
+		for t in threading.enumerate()
+		if 'ScanThread' in t.name
+	]
+	
+	scans_summary = []
+	for scan_id, scan_data in SCANS.items():
+		scans_summary.append({
+			'scanId': scan_id,
+			'url': scan_data.get('url'),
+			'status': scan_data.get('status'),
+			'hasResult': 'result' in scan_data,
+			'error': scan_data.get('error'),
+			'createdAt': scan_data.get('createdAt'),
+			'updatedAt': scan_data.get('updatedAt'),
+		})
+	
+	return {
+		'totalScans': len(SCANS),
+		'activeThreads': active_threads,
+		'scans': sorted(scans_summary, key=lambda x: x['createdAt'], reverse=True)
+	}
