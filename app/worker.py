@@ -127,7 +127,9 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 	import traceback
 
 	try:
-		out_dir = out_dir or Path.cwd() / "data" / "screenshots"
+		# Always use project root directory for consistency
+		project_root = Path(__file__).parent.parent
+		out_dir = out_dir or project_root / "data" / "screenshots"
 		out_dir.mkdir(parents=True, exist_ok=True)
 	except Exception as e:
 		print(f"Error creating output directory: {e}")

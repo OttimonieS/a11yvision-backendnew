@@ -1,0 +1,2509 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessibility Report - Example Domain</title>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #f5f5f5;
+            }
+            .header {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            h1 {
+                margin: 0 0 10px 0;
+                color: #1a1a1a;
+            }
+            .summary {
+                display: flex;
+                gap: 15px;
+                margin-top: 15px;
+            }
+            .summary-card {
+                flex: 1;
+                padding: 15px;
+                border-radius: 6px;
+                color: white;
+                text-align: center;
+            }
+            .critical { background: #dc2626; }
+            .serious { background: #fb923c; }
+            .minor { background: #facc15; color: #1a1a1a; }
+            .issue {
+                background: white;
+                padding: 20px;
+                margin-bottom: 15px;
+                border-radius: 8px;
+                border-left: 4px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .issue.critical { border-left-color: #dc2626; }
+            .issue.serious { border-left-color: #fb923c; }
+            .issue.minor { border-left-color: #facc15; }
+            .issue-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                margin-bottom: 10px;
+            }
+            .issue-title {
+                font-weight: 600;
+                font-size: 1.1em;
+                color: #1a1a1a;
+            }
+            .badge {
+                padding: 4px 12px;
+                border-radius: 12px;
+                font-size: 0.85em;
+                font-weight: 500;
+            }
+            .badge.critical { background: #fee2e2; color: #dc2626; }
+            .badge.serious { background: #ffedd5; color: #fb923c; }
+            .badge.minor { background: #fef9c3; color: #ca8a04; }
+            .issue-message {
+                color: #4b5563;
+                line-height: 1.6;
+                margin: 10px 0;
+            }
+            .details {
+                background: #f9fafb;
+                padding: 15px;
+                border-radius: 6px;
+                margin-top: 15px;
+            }
+            .detail-row {
+                margin: 8px 0;
+                display: flex;
+                gap: 10px;
+            }
+            .detail-label {
+                font-weight: 600;
+                min-width: 150px;
+                color: #374151;
+            }
+            .detail-value {
+                color: #6b7280;
+            }
+            .how-to-fix {
+                margin-top: 15px;
+                padding: 15px;
+                background: #eff6ff;
+                border-left: 3px solid #3b82f6;
+                border-radius: 4px;
+            }
+            .how-to-fix h4 {
+                margin: 0 0 10px 0;
+                color: #1e40af;
+            }
+            .how-to-fix ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .how-to-fix li {
+                margin: 5px 0;
+                color: #1e3a8a;
+            }
+            code {
+                background: #e5e7eb;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Accessibility Scan Report</h1>
+            <p><strong>Page:</strong> Example Domain</p>
+            <p><strong>URL:</strong> https://example.com/</p>
+            <div class="summary">
+                <div class="summary-card critical">
+                    <div style="font-size: 2em; font-weight: bold;">0</div>
+                    <div>Critical Issues</div>
+                </div>
+                <div class="summary-card serious">
+                    <div style="font-size: 2em; font-weight: bold;">81</div>
+                    <div>Serious Issues</div>
+                </div>
+                <div class="summary-card minor">
+                    <div style="font-size: 2em; font-weight: bold;">0</div>
+                    <div>Minor Issues</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#1: Low Contrast</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Low contrast detected (ratio: 11.54:1). Foreground: RGB(238, 238, 238), Background: RGB(47, 47, 47). Location: 0.0% from left, 0.0% from top. Recommendation: Increase contrast between text and background to at least 4.5:1 for normal text or 3:1 for large text (18pt+).</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">1.4.3, 1.4.6</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">0.0% from left, 0.0% from top (0, 0px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">1280 × 800 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Contrast Ratio:</span>
+                    <span class="detail-value">11.54:1</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Foreground Color:</span>
+                    <span class="detail-value">RGB(238, 238, 238)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Background Color:</span>
+                    <span class="detail-value">RGB(47, 47, 47)</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Use a color contrast checker tool to find compliant color combinations</li><li>Darken the text color or lighten the background color</li><li>Consider using bold text to improve readability</li><li>Test with different color blindness simulations</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#2: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (16x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 28px too narrow and 34px too short. Location: 25.0% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">25.0% from left, 26.6% from top (320, 213px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">16 × 10 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#3: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (9x8px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 36px too short. Location: 24.5% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">24.5% from left, 26.6% from top (313, 213px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 8 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#4: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (12x8px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 36px too short. Location: 23.4% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">23.4% from left, 26.6% from top (300, 213px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 8 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#5: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (13x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 35px too short. Location: 22.0% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">22.0% from left, 26.6% from top (281, 213px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 9 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#6: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (6x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 35px too short. Location: 21.4% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">21.4% from left, 26.6% from top (274, 213px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 9 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#7: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 20.2% from left, 26.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">20.2% from left, 26.4% from top (259, 211px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 12 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#8: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Element: a (a) containing "Learn more". Small interactive target detected (82x14px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 0px too narrow and 30px too short. Location: 19.9% from left, 26.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">19.9% from left, 26.4% from top (255, 211px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">82 × 14 pixels</span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Element:</span>
+                    <span class="detail-value"><code>a</code></span>
+                </div>
+            
+                <div class="detail-row">
+                    <span class="detail-label">Text Content:</span>
+                    <span class="detail-value">"Learn more"</span>
+                </div>
+                </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#9: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (15x7px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 37px too short. Location: 43.2% from left, 22.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">43.2% from left, 22.4% from top (553, 179px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">15 × 7 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#10: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 35.9% from left, 22.1% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">35.9% from left, 22.1% from top (459, 177px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#11: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (11x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 33px too narrow and 35px too short. Location: 24.6% from left, 22.1% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">24.6% from left, 22.1% from top (315, 177px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">11 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#12: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 76.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">76.5% from left, 22.0% from top (979, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#13: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 75.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">75.8% from left, 22.0% from top (970, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#14: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 73.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">73.3% from left, 22.0% from top (938, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#15: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 71.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">71.9% from left, 22.0% from top (920, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">17 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#16: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 71.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">71.1% from left, 22.0% from top (910, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#17: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 70.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">70.1% from left, 22.0% from top (897, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#18: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (14x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 34px too short. Location: 68.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">68.3% from left, 22.0% from top (874, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">14 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#19: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 67.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">67.5% from left, 22.0% from top (864, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">15 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#20: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 65.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">65.2% from left, 22.0% from top (834, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#21: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (7x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 37px too narrow and 35px too short. Location: 64.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">64.8% from left, 22.0% from top (829, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">7 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#22: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 62.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">62.7% from left, 22.0% from top (803, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#23: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 61.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">61.7% from left, 22.0% from top (790, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#24: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 61.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">61.2% from left, 22.0% from top (783, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#25: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 60.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">60.6% from left, 22.0% from top (776, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#26: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (18x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 35px too short. Location: 58.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">58.8% from left, 22.0% from top (753, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">18 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#27: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 57.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">57.4% from left, 22.0% from top (735, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">17 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#28: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x14px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 30px too short. Location: 56.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">56.3% from left, 22.0% from top (721, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 14 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#29: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 55.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">55.6% from left, 22.0% from top (712, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#30: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 53.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">53.9% from left, 22.0% from top (690, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#31: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 53.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">53.3% from left, 22.0% from top (682, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#32: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 52.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">52.6% from left, 22.0% from top (673, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#33: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 50.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">50.4% from left, 22.0% from top (645, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#34: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 35px too short. Location: 48.0% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">48.0% from left, 22.0% from top (614, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#35: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 46.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">46.5% from left, 22.0% from top (595, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">15 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#36: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 45.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">45.5% from left, 22.0% from top (582, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#37: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 44.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">44.5% from left, 22.0% from top (569, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#38: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 42.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">42.5% from left, 22.0% from top (544, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#39: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 41.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">41.5% from left, 22.0% from top (531, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#40: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 40.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">40.8% from left, 22.0% from top (522, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#41: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 38.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">38.3% from left, 22.0% from top (490, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#42: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 37.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">37.6% from left, 22.0% from top (481, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#43: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 36.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">36.6% from left, 22.0% from top (468, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#44: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 35.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">35.2% from left, 22.0% from top (451, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#45: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 34.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">34.5% from left, 22.0% from top (442, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#46: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 32.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">32.4% from left, 22.0% from top (415, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#47: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (14x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 34px too short. Location: 30.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">30.9% from left, 22.0% from top (396, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">14 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#48: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 30.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">30.2% from left, 22.0% from top (386, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">15 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#49: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (5x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 35px too short. Location: 29.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">29.5% from left, 22.0% from top (377, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">5 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#50: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 28.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">28.7% from left, 22.0% from top (367, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#51: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 27.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">27.4% from left, 22.0% from top (351, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#52: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 26.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">26.1% from left, 22.0% from top (334, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#53: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (7x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 37px too narrow and 35px too short. Location: 25.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">25.2% from left, 22.0% from top (322, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">7 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#54: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (10x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 34px too narrow and 35px too short. Location: 24.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">24.1% from left, 22.0% from top (308, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">10 × 9 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#55: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 23.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">23.3% from left, 22.0% from top (298, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#56: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 21.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">21.7% from left, 22.0% from top (278, 176px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">6 × 10 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#57: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (18x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 33px too short. Location: 74.3% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">74.3% from left, 21.9% from top (951, 175px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">18 × 11 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#58: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (14x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 33px too short. Location: 51.1% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">51.1% from left, 21.9% from top (654, 175px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">14 × 11 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#59: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (18x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 33px too short. Location: 39.0% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">39.0% from left, 21.9% from top (499, 175px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">18 × 11 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#60: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (11x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 33px too narrow and 32px too short. Location: 64.0% from left, 21.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">64.0% from left, 21.8% from top (819, 174px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">11 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#61: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 32px too short. Location: 66.5% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">66.5% from left, 21.6% from top (851, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#62: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (8x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 31px too short. Location: 54.6% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">54.6% from left, 21.6% from top (699, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">8 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#63: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 49.0% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">49.0% from left, 21.6% from top (627, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">17 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#64: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (3x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 41px too narrow and 32px too short. Location: 46.2% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">46.2% from left, 21.6% from top (592, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">3 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#65: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 33.8% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">33.8% from left, 21.6% from top (432, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#66: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 22.6% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">22.6% from left, 21.6% from top (289, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">9 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#67: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (17x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 32px too short. Location: 20.0% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">20.0% from left, 21.6% from top (256, 173px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">17 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#68: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (5x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 31px too short. Location: 28.3% from left, 21.5% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">28.3% from left, 21.5% from top (362, 172px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">5 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#69: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 33.8% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">33.8% from left, 16.8% from top (433, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#70: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (4x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 40px too narrow and 32px too short. Location: 33.4% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">33.4% from left, 16.8% from top (427, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">4 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#71: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 32px too short. Location: 32.3% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">32.3% from left, 16.8% from top (413, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#72: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (19x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 25px too narrow and 32px too short. Location: 30.6% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">30.6% from left, 16.8% from top (392, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">19 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#73: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 29.5% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">29.5% from left, 16.8% from top (377, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#74: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 26.5% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">26.5% from left, 16.8% from top (339, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#75: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 32px too short. Location: 22.0% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">22.0% from left, 16.8% from top (282, 134px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 12 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#76: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (13x19px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 25px too short. Location: 24.8% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">24.8% from left, 16.6% from top (318, 133px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">13 × 19 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#77: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (20x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 24px too narrow and 31px too short. Location: 23.1% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">23.1% from left, 16.6% from top (296, 133px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">20 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#78: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (12x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 31px too short. Location: 21.1% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">21.1% from left, 16.6% from top (270, 133px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">12 × 13 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#79: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (16x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 28px too narrow and 26px too short. Location: 28.1% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">28.1% from left, 16.0% from top (360, 128px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">16 × 18 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#80: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (5x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 26px too short. Location: 26.0% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">26.0% from left, 16.0% from top (333, 128px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">5 × 18 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="issue serious">
+            <div class="issue-header">
+                <div class="issue-title">#81: Target Size</div>
+                <span class="badge serious">SERIOUS</span>
+            </div>
+            <div class="issue-message">Small interactive target detected (10x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 34px too narrow and 26px too short. Location: 20.2% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.</div>
+            <div class="details">
+                <div class="detail-row">
+                    <span class="detail-label">WCAG Criteria:</span>
+                    <span class="detail-value">2.5.8</span>
+                </div>
+        
+                <div class="detail-row">
+                    <span class="detail-label">Position:</span>
+                    <span class="detail-value">20.2% from left, 16.0% from top (258, 128px)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Size:</span>
+                    <span class="detail-value">10 × 18 pixels</span>
+                </div>
+            </div>
+                <div class="how-to-fix">
+                    <h4>How to Fix:</h4>
+                    <ul>
+            <li>Add CSS padding to increase the clickable area</li><li>Use min-width and min-height CSS properties</li><li>Ensure adequate spacing (at least 8px) between adjacent targets</li><li>Consider making the entire parent container clickable</li><li>Test on mobile devices with actual finger taps</li>
+                    </ul>
+                </div>
+            </div>
+    </body>
+    </html>
+    
