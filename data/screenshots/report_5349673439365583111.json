@@ -1,0 +1,33 @@
+{
+  "url": "https://example.com",
+  "page_info": {
+    "title": "Example Domain",
+    "url": "https://example.com/",
+    "lang": "en",
+    "viewport": {
+      "width": 1280,
+      "height": 800,
+      "scrollHeight": 800
+    }
+  },
+  "issues": [
+    {
+      "id": "A11Y-LOWCON-0",
+      "rule": "low-contrast",
+      "wcag": [
+        "1.4.3",
+        "1.4.6"
+      ],
+      "severity": "serious",
+      "confidence": 0.75,
+      "message": "Element: a (a) containing \"Learn more\". Low contrast detected (ratio: 11.54:1). Foreground: RGB(np.int64(238), np.int64(238), np.int64(238)), Background: RGB(np.int64(47), np.int64(47), np.int64(47)). Location: 0.0% from left, 0.0% from top. Recommendation: Increase contrast between text and background to at least 4.5:1 for normal text or 3:1 for large text (18pt+).",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 800
+      },
+      "details": {
+        "contrast_ratio": 11.54,
+        "foreground_color": [
+          

@@ -38,8 +38,8 @@ def get_dominant_colors(img_region):
 	min_color = np.min(pixels, axis=0).astype(int)
 	max_color = np.max(pixels, axis=0).astype(int)
 
-	# Return the two most contrasting
-	return tuple(max_color), tuple(min_color)
+	# Return the two most contrasting - convert to Python int for JSON serialization
+	return tuple(int(c) for c in max_color), tuple(int(c) for c in min_color)
 
 
 def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
@@ -111,7 +111,7 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 			'severity': 'critical' if contrast_ratio < 3.0 else 'serious',
 			'confidence': 0.75,
 			'message': message,
-			'bbox': {'x': x, 'y': y, 'w': cw, 'h': ch},
+			'bbox': {'x': int(x), 'y': int(y), 'w': int(cw), 'h': int(ch)},
 			'details': {
 				'contrast_ratio': round(contrast_ratio, 2),
 				'foreground_color': fg_color,
@@ -121,10 +121,10 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 				'position': {
 					'x_percent': x_percent,
 					'y_percent': y_percent,
-					'x_px': x,
-					'y_px': y,
-					'width': cw,
-					'height': ch
+					'x_px': int(x),
+					'y_px': int(y),
+					'width': int(cw),
+					'height': int(ch)
 				},
 				'recommendation': 'Increase color contrast to meet WCAG 2.1 Level AA requirements (4.5:1 for normal text, 3:1 for large text)',
 				'how_to_fix': [
@@ -187,19 +187,19 @@ def analyze_image(pil_img: Image.Image, page_elements: List[Dict] = None):
 				'severity': severity,
 				'confidence': 0.65,
 				'message': message,
-				'bbox': {'x': x, 'y': y, 'w': cw, 'h': ch},
+				'bbox': {'x': int(x), 'y': int(y), 'w': int(cw), 'h': int(ch)},
 				'details': {
-					'current_size': {'width': cw, 'height': ch},
+					'current_size': {'width': int(cw), 'height': int(ch)},
 					'required_size': {'width': 24, 'height': 24},
 					'recommended_size': {'width': 44, 'height': 44},
-					'shortage': {'width': width_shortage, 'height': height_shortage},
+					'shortage': {'width': int(width_shortage), 'height': int(height_shortage)},
 					'position': {
 						'x_percent': x_percent,
 						'y_percent': y_percent,
-						'x_px': x,
-						'y_px': y,
-						'width': cw,
-						'height': ch
+						'x_px': int(x),
+						'y_px': int(y),
+						'width': int(cw),
+						'height': int(ch)
 					},
 					'wcag_level': wcag_level,
 					'recommendation': 'Increase clickable/tappable area to minimum 44x44 pixels',

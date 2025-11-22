@@ -1,0 +1,4264 @@
+{
+  "url": "https://example.com",
+  "page_info": {
+    "title": "Example Domain",
+    "url": "https://example.com/",
+    "lang": "en",
+    "viewport": {
+      "width": 1280,
+      "height": 800,
+      "scrollHeight": 800
+    }
+  },
+  "issues": [
+    {
+      "id": "A11Y-LOWCON-0",
+      "rule": "low-contrast",
+      "wcag": [
+        "1.4.3",
+        "1.4.6"
+      ],
+      "severity": "serious",
+      "confidence": 0.75,
+      "message": "Element: a (a) containing \"Learn more\". Low contrast detected (ratio: 11.54:1). Foreground: RGB(238, 238, 238), Background: RGB(47, 47, 47). Location: 0.0% from left, 0.0% from top. Recommendation: Increase contrast between text and background to at least 4.5:1 for normal text or 3:1 for large text (18pt+).",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 800
+      },
+      "details": {
+        "contrast_ratio": 11.54,
+        "foreground_color": [
+          238,
+          238,
+          238
+        ],
+        "background_color": [
+          47,
+          47,
+          47
+        ],
+        "wcag_aa_pass": true,
+        "wcag_aaa_pass": true,
+        "position": {
+          "x_percent": 0.0,
+          "y_percent": 0.0,
+          "x_px": 0,
+          "y_px": 0,
+          "width": 1280,
+          "height": 800
+        },
+        "recommendation": "Increase color contrast to meet WCAG 2.1 Level AA requirements (4.5:1 for normal text, 3:1 for large text)",
+        "how_to_fix": [
+          "Use a color contrast checker tool to find compliant color combinations",
+          "Darken the text color or lighten the background color",
+          "Consider using bold text to improve readability",
+          "Test with different color blindness simulations"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-15",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (16x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 28px too narrow and 34px too short. Location: 25.0% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 320,
+        "y": 213,
+        "w": 16,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 16,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 28,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 25.0,
+          "y_percent": 26.6,
+          "x_px": 320,
+          "y_px": 213,
+          "width": 16,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-16",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (9x8px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 36px too short. Location: 24.5% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 313,
+        "y": 213,
+        "w": 9,
+        "h": 8
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 8
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 36
+        },
+        "position": {
+          "x_percent": 24.5,
+          "y_percent": 26.6,
+          "x_px": 313,
+          "y_px": 213,
+          "width": 9,
+          "height": 8
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-17",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (12x8px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 36px too short. Location: 23.4% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 300,
+        "y": 213,
+        "w": 12,
+        "h": 8
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 8
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 36
+        },
+        "position": {
+          "x_percent": 23.4,
+          "y_percent": 26.6,
+          "x_px": 300,
+          "y_px": 213,
+          "width": 12,
+          "height": 8
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-18",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (13x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 35px too short. Location: 22.0% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 281,
+        "y": 213,
+        "w": 13,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 22.0,
+          "y_percent": 26.6,
+          "x_px": 281,
+          "y_px": 213,
+          "width": 13,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-19",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (6x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 35px too short. Location: 21.4% from left, 26.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 274,
+        "y": 213,
+        "w": 6,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 21.4,
+          "y_percent": 26.6,
+          "x_px": 274,
+          "y_px": 213,
+          "width": 6,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-20",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 20.2% from left, 26.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 259,
+        "y": 211,
+        "w": 13,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 20.2,
+          "y_percent": 26.4,
+          "x_px": 259,
+          "y_px": 211,
+          "width": 13,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-21",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Element: a (a) containing \"Learn more\". Small interactive target detected (82x14px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 0px too narrow and 30px too short. Location: 19.9% from left, 26.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 255,
+        "y": 211,
+        "w": 82,
+        "h": 14
+      },
+      "details": {
+        "current_size": {
+          "width": 82,
+          "height": 14
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 0,
+          "height": 30
+        },
+        "position": {
+          "x_percent": 19.9,
+          "y_percent": 26.4,
+          "x_px": 255,
+          "y_px": 211,
+          "width": 82,
+          "height": 14
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ],
+        "element": {
+          "selector": "a",
+          "tag": "a",
+          "text": "Learn more",
+          "role": "a",
+          "ariaLabel": "",
+          "href": "https://iana.org/domains/example",
+          "type": "",
+          "computed_styles": {
+            "color": "rgb(51, 68, 136)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          }
+        }
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-39",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (15x7px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 37px too short. Location: 43.2% from left, 22.4% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 553,
+        "y": 179,
+        "w": 15,
+        "h": 7
+      },
+      "details": {
+        "current_size": {
+          "width": 15,
+          "height": 7
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 29,
+          "height": 37
+        },
+        "position": {
+          "x_percent": 43.2,
+          "y_percent": 22.4,
+          "x_px": 553,
+          "y_px": 179,
+          "width": 15,
+          "height": 7
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-59",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 35.9% from left, 22.1% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 459,
+        "y": 177,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 35.9,
+          "y_percent": 22.1,
+          "x_px": 459,
+          "y_px": 177,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-64",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (11x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 33px too narrow and 35px too short. Location: 24.6% from left, 22.1% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 315,
+        "y": 177,
+        "w": 11,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 11,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 33,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 24.6,
+          "y_percent": 22.1,
+          "x_px": 315,
+          "y_px": 177,
+          "width": 11,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-66",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 76.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 979,
+        "y": 176,
+        "w": 6,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 76.5,
+          "y_percent": 22.0,
+          "x_px": 979,
+          "y_px": 176,
+          "width": 6,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-67",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 75.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 970,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 75.8,
+          "y_percent": 22.0,
+          "x_px": 970,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-68",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 73.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 938,
+        "y": 176,
+        "w": 12,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 73.3,
+          "y_percent": 22.0,
+          "x_px": 938,
+          "y_px": 176,
+          "width": 12,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-69",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 71.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 920,
+        "y": 176,
+        "w": 17,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 17,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 27,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 71.9,
+          "y_percent": 22.0,
+          "x_px": 920,
+          "y_px": 176,
+          "width": 17,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-70",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 71.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 910,
+        "y": 176,
+        "w": 9,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 71.1,
+          "y_percent": 22.0,
+          "x_px": 910,
+          "y_px": 176,
+          "width": 9,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-71",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 70.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 897,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 70.1,
+          "y_percent": 22.0,
+          "x_px": 897,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-72",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (14x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 34px too short. Location: 68.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 874,
+        "y": 176,
+        "w": 14,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 14,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 30,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 68.3,
+          "y_percent": 22.0,
+          "x_px": 874,
+          "y_px": 176,
+          "width": 14,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-73",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 67.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 864,
+        "y": 176,
+        "w": 15,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 15,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 29,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 67.5,
+          "y_percent": 22.0,
+          "x_px": 864,
+          "y_px": 176,
+          "width": 15,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-74",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 65.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 834,
+        "y": 176,
+        "w": 12,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 65.2,
+          "y_percent": 22.0,
+          "x_px": 834,
+          "y_px": 176,
+          "width": 12,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-75",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (7x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 37px too narrow and 35px too short. Location: 64.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 829,
+        "y": 176,
+        "w": 7,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 7,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 37,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 64.8,
+          "y_percent": 22.0,
+          "x_px": 829,
+          "y_px": 176,
+          "width": 7,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-76",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 62.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 803,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 62.7,
+          "y_percent": 22.0,
+          "x_px": 803,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-77",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 34px too short. Location: 61.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 790,
+        "y": 176,
+        "w": 12,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 61.7,
+          "y_percent": 22.0,
+          "x_px": 790,
+          "y_px": 176,
+          "width": 12,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-78",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 61.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 783,
+        "y": 176,
+        "w": 6,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 61.2,
+          "y_percent": 22.0,
+          "x_px": 783,
+          "y_px": 176,
+          "width": 6,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-79",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 60.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 776,
+        "y": 176,
+        "w": 6,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 60.6,
+          "y_percent": 22.0,
+          "x_px": 776,
+          "y_px": 176,
+          "width": 6,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-80",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (18x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 35px too short. Location: 58.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 753,
+        "y": 176,
+        "w": 18,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 18,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 26,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 58.8,
+          "y_percent": 22.0,
+          "x_px": 753,
+          "y_px": 176,
+          "width": 18,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-81",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 57.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 735,
+        "y": 176,
+        "w": 17,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 17,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 27,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 57.4,
+          "y_percent": 22.0,
+          "x_px": 735,
+          "y_px": 176,
+          "width": 17,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-82",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x14px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 30px too short. Location: 56.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 721,
+        "y": 176,
+        "w": 9,
+        "h": 14
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 14
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 30
+        },
+        "position": {
+          "x_percent": 56.3,
+          "y_percent": 22.0,
+          "x_px": 721,
+          "y_px": 176,
+          "width": 9,
+          "height": 14
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-83",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 55.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 712,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 55.6,
+          "y_percent": 22.0,
+          "x_px": 712,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-84",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 53.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 690,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 53.9,
+          "y_percent": 22.0,
+          "x_px": 690,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-85",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 53.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 682,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 53.3,
+          "y_percent": 22.0,
+          "x_px": 682,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-86",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 52.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 673,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 52.6,
+          "y_percent": 22.0,
+          "x_px": 673,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-87",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 50.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 645,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 50.4,
+          "y_percent": 22.0,
+          "x_px": 645,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-88",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 35px too short. Location: 48.0% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 614,
+        "y": 176,
+        "w": 6,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 48.0,
+          "y_percent": 22.0,
+          "x_px": 614,
+          "y_px": 176,
+          "width": 6,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-89",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 46.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 595,
+        "y": 176,
+        "w": 15,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 15,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 29,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 46.5,
+          "y_percent": 22.0,
+          "x_px": 595,
+          "y_px": 176,
+          "width": 15,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-90",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 45.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 582,
+        "y": 176,
+        "w": 9,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 45.5,
+          "y_percent": 22.0,
+          "x_px": 582,
+          "y_px": 176,
+          "width": 9,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-91",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 44.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 569,
+        "y": 176,
+        "w": 12,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 44.5,
+          "y_percent": 22.0,
+          "x_px": 569,
+          "y_px": 176,
+          "width": 12,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-94",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 42.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 544,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 42.5,
+          "y_percent": 22.0,
+          "x_px": 544,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-95",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 41.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 531,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 41.5,
+          "y_percent": 22.0,
+          "x_px": 531,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-96",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 40.8% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 522,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 40.8,
+          "y_percent": 22.0,
+          "x_px": 522,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-98",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 38.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 490,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 38.3,
+          "y_percent": 22.0,
+          "x_px": 490,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-99",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 37.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 481,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 37.6,
+          "y_percent": 22.0,
+          "x_px": 481,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-100",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 36.6% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 468,
+        "y": 176,
+        "w": 12,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 36.6,
+          "y_percent": 22.0,
+          "x_px": 468,
+          "y_px": 176,
+          "width": 12,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-101",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 35.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 451,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 35.2,
+          "y_percent": 22.0,
+          "x_px": 451,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-102",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 34px too short. Location: 34.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 442,
+        "y": 176,
+        "w": 8,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 34.5,
+          "y_percent": 22.0,
+          "x_px": 442,
+          "y_px": 176,
+          "width": 8,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-103",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 35px too short. Location: 32.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 415,
+        "y": 176,
+        "w": 12,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 32.4,
+          "y_percent": 22.0,
+          "x_px": 415,
+          "y_px": 176,
+          "width": 12,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-104",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (14x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 34px too short. Location: 30.9% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 396,
+        "y": 176,
+        "w": 14,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 14,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 30,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 30.9,
+          "y_percent": 22.0,
+          "x_px": 396,
+          "y_px": 176,
+          "width": 14,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-105",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (15x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 29px too narrow and 34px too short. Location: 30.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 386,
+        "y": 176,
+        "w": 15,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 15,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 29,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 30.2,
+          "y_percent": 22.0,
+          "x_px": 386,
+          "y_px": 176,
+          "width": 15,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-106",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (5x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 35px too short. Location: 29.5% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 377,
+        "y": 176,
+        "w": 5,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 5,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 39,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 29.5,
+          "y_percent": 22.0,
+          "x_px": 377,
+          "y_px": 176,
+          "width": 5,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-107",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 28.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 367,
+        "y": 176,
+        "w": 9,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 28.7,
+          "y_percent": 22.0,
+          "x_px": 367,
+          "y_px": 176,
+          "width": 9,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-108",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 27.4% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 351,
+        "y": 176,
+        "w": 6,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 27.4,
+          "y_percent": 22.0,
+          "x_px": 351,
+          "y_px": 176,
+          "width": 6,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-109",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 35px too short. Location: 26.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 334,
+        "y": 176,
+        "w": 8,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 26.1,
+          "y_percent": 22.0,
+          "x_px": 334,
+          "y_px": 176,
+          "width": 8,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-110",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (7x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 37px too narrow and 35px too short. Location: 25.2% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 322,
+        "y": 176,
+        "w": 7,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 7,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 37,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 25.2,
+          "y_percent": 22.0,
+          "x_px": 322,
+          "y_px": 176,
+          "width": 7,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-111",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (10x9px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 34px too narrow and 35px too short. Location: 24.1% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 308,
+        "y": 176,
+        "w": 10,
+        "h": 9
+      },
+      "details": {
+        "current_size": {
+          "width": 10,
+          "height": 9
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 34,
+          "height": 35
+        },
+        "position": {
+          "x_percent": 24.1,
+          "y_percent": 22.0,
+          "x_px": 308,
+          "y_px": 176,
+          "width": 10,
+          "height": 9
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-112",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 34px too short. Location: 23.3% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 298,
+        "y": 176,
+        "w": 9,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 23.3,
+          "y_percent": 22.0,
+          "x_px": 298,
+          "y_px": 176,
+          "width": 9,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-113",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (6x10px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 38px too narrow and 34px too short. Location: 21.7% from left, 22.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 278,
+        "y": 176,
+        "w": 6,
+        "h": 10
+      },
+      "details": {
+        "current_size": {
+          "width": 6,
+          "height": 10
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 38,
+          "height": 34
+        },
+        "position": {
+          "x_percent": 21.7,
+          "y_percent": 22.0,
+          "x_px": 278,
+          "y_px": 176,
+          "width": 6,
+          "height": 10
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-114",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (18x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 33px too short. Location: 74.3% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 951,
+        "y": 175,
+        "w": 18,
+        "h": 11
+      },
+      "details": {
+        "current_size": {
+          "width": 18,
+          "height": 11
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 26,
+          "height": 33
+        },
+        "position": {
+          "x_percent": 74.3,
+          "y_percent": 21.9,
+          "x_px": 951,
+          "y_px": 175,
+          "width": 18,
+          "height": 11
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-115",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (14x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 30px too narrow and 33px too short. Location: 51.1% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 654,
+        "y": 175,
+        "w": 14,
+        "h": 11
+      },
+      "details": {
+        "current_size": {
+          "width": 14,
+          "height": 11
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 30,
+          "height": 33
+        },
+        "position": {
+          "x_percent": 51.1,
+          "y_percent": 21.9,
+          "x_px": 654,
+          "y_px": 175,
+          "width": 14,
+          "height": 11
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-116",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (18x11px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 26px too narrow and 33px too short. Location: 39.0% from left, 21.9% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 499,
+        "y": 175,
+        "w": 18,
+        "h": 11
+      },
+      "details": {
+        "current_size": {
+          "width": 18,
+          "height": 11
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 26,
+          "height": 33
+        },
+        "position": {
+          "x_percent": 39.0,
+          "y_percent": 21.9,
+          "x_px": 499,
+          "y_px": 175,
+          "width": 18,
+          "height": 11
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-117",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (11x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 33px too narrow and 32px too short. Location: 64.0% from left, 21.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 819,
+        "y": 174,
+        "w": 11,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 11,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 33,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 64.0,
+          "y_percent": 21.8,
+          "x_px": 819,
+          "y_px": 174,
+          "width": 11,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-120",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 32px too short. Location: 66.5% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 851,
+        "y": 173,
+        "w": 8,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 66.5,
+          "y_percent": 21.6,
+          "x_px": 851,
+          "y_px": 173,
+          "width": 8,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-125",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (8x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 36px too narrow and 31px too short. Location: 54.6% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 699,
+        "y": 173,
+        "w": 8,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 8,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 36,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 54.6,
+          "y_percent": 21.6,
+          "x_px": 699,
+          "y_px": 173,
+          "width": 8,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-126",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (17x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 31px too short. Location: 49.0% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 627,
+        "y": 173,
+        "w": 17,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 17,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 27,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 49.0,
+          "y_percent": 21.6,
+          "x_px": 627,
+          "y_px": 173,
+          "width": 17,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-128",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (3x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 41px too narrow and 32px too short. Location: 46.2% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 592,
+        "y": 173,
+        "w": 3,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 3,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 41,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 46.2,
+          "y_percent": 21.6,
+          "x_px": 592,
+          "y_px": 173,
+          "width": 3,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-130",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 33.8% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 432,
+        "y": 173,
+        "w": 9,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 33.8,
+          "y_percent": 21.6,
+          "x_px": 432,
+          "y_px": 173,
+          "width": 9,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-134",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (9x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 35px too narrow and 31px too short. Location: 22.6% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 289,
+        "y": 173,
+        "w": 9,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 9,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 35,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 22.6,
+          "y_percent": 21.6,
+          "x_px": 289,
+          "y_px": 173,
+          "width": 9,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-136",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (17x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 27px too narrow and 32px too short. Location: 20.0% from left, 21.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 256,
+        "y": 173,
+        "w": 17,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 17,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 27,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 20.0,
+          "y_percent": 21.6,
+          "x_px": 256,
+          "y_px": 173,
+          "width": 17,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-137",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (5x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 31px too short. Location: 28.3% from left, 21.5% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 362,
+        "y": 172,
+        "w": 5,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 5,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 39,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 28.3,
+          "y_percent": 21.5,
+          "x_px": 362,
+          "y_px": 172,
+          "width": 5,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-141",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 33.8% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 433,
+        "y": 134,
+        "w": 13,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 33.8,
+          "y_percent": 16.8,
+          "x_px": 433,
+          "y_px": 134,
+          "width": 13,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-142",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (4x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 40px too narrow and 32px too short. Location: 33.4% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 427,
+        "y": 134,
+        "w": 4,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 4,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 40,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 33.4,
+          "y_percent": 16.8,
+          "x_px": 427,
+          "y_px": 134,
+          "width": 4,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-143",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 32px too short. Location: 32.3% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 413,
+        "y": 134,
+        "w": 12,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 32.3,
+          "y_percent": 16.8,
+          "x_px": 413,
+          "y_px": 134,
+          "width": 12,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-144",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (19x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 25px too narrow and 32px too short. Location: 30.6% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 392,
+        "y": 134,
+        "w": 19,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 19,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 25,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 30.6,
+          "y_percent": 16.8,
+          "x_px": 392,
+          "y_px": 134,
+          "width": 19,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-145",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 29.5% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 377,
+        "y": 134,
+        "w": 13,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 29.5,
+          "y_percent": 16.8,
+          "x_px": 377,
+          "y_px": 134,
+          "width": 13,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-146",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (13x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 32px too short. Location: 26.5% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 339,
+        "y": 134,
+        "w": 13,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 26.5,
+          "y_percent": 16.8,
+          "x_px": 339,
+          "y_px": 134,
+          "width": 13,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-147",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x12px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 32px too short. Location: 22.0% from left, 16.8% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 282,
+        "y": 134,
+        "w": 12,
+        "h": 12
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 12
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 32
+        },
+        "position": {
+          "x_percent": 22.0,
+          "y_percent": 16.8,
+          "x_px": 282,
+          "y_px": 134,
+          "width": 12,
+          "height": 12
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-148",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (13x19px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 31px too narrow and 25px too short. Location: 24.8% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 318,
+        "y": 133,
+        "w": 13,
+        "h": 19
+      },
+      "details": {
+        "current_size": {
+          "width": 13,
+          "height": 19
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 31,
+          "height": 25
+        },
+        "position": {
+          "x_percent": 24.8,
+          "y_percent": 16.6,
+          "x_px": 318,
+          "y_px": 133,
+          "width": 13,
+          "height": 19
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-149",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (20x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 24px too narrow and 31px too short. Location: 23.1% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 296,
+        "y": 133,
+        "w": 20,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 20,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 24,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 23.1,
+          "y_percent": 16.6,
+          "x_px": 296,
+          "y_px": 133,
+          "width": 20,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-150",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (12x13px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 32px too narrow and 31px too short. Location: 21.1% from left, 16.6% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 270,
+        "y": 133,
+        "w": 12,
+        "h": 13
+      },
+      "details": {
+        "current_size": {
+          "width": 12,
+          "height": 13
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 32,
+          "height": 31
+        },
+        "position": {
+          "x_percent": 21.1,
+          "y_percent": 16.6,
+          "x_px": 270,
+          "y_px": 133,
+          "width": 12,
+          "height": 13
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-152",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (16x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 28px too narrow and 26px too short. Location: 28.1% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 360,
+        "y": 128,
+        "w": 16,
+        "h": 18
+      },
+      "details": {
+        "current_size": {
+          "width": 16,
+          "height": 18
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 28,
+          "height": 26
+        },
+        "position": {
+          "x_percent": 28.1,
+          "y_percent": 16.0,
+          "x_px": 360,
+          "y_px": 128,
+          "width": 16,
+          "height": 18
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-153",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (5x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 39px too narrow and 26px too short. Location: 26.0% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 333,
+        "y": 128,
+        "w": 5,
+        "h": 18
+      },
+      "details": {
+        "current_size": {
+          "width": 5,
+          "height": 18
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 39,
+          "height": 26
+        },
+        "position": {
+          "x_percent": 26.0,
+          "y_percent": 16.0,
+          "x_px": 333,
+          "y_px": 128,
+          "width": 5,
+          "height": 18
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    },
+    {
+      "id": "A11Y-SMALLTARGET-154",
+      "rule": "target-size",
+      "wcag": [
+        "2.5.8"
+      ],
+      "severity": "serious",
+      "confidence": 0.65,
+      "message": "Small interactive target detected (10x18px). WCAG 2.5.8 requires minimum 24x24px, recommended 44x44px for touch targets. Current target is 34px too narrow and 26px too short. Location: 20.2% from left, 16.0% from top. Recommendation: Increase tap/click target size to at least 44x44 pixels with adequate spacing.",
+      "bbox": {
+        "x": 258,
+        "y": 128,
+        "w": 10,
+        "h": 18
+      },
+      "details": {
+        "current_size": {
+          "width": 10,
+          "height": 18
+        },
+        "required_size": {
+          "width": 24,
+          "height": 24
+        },
+        "recommended_size": {
+          "width": 44,
+          "height": 44
+        },
+        "shortage": {
+          "width": 34,
+          "height": 26
+        },
+        "position": {
+          "x_percent": 20.2,
+          "y_percent": 16.0,
+          "x_px": 258,
+          "y_px": 128,
+          "width": 10,
+          "height": 18
+        },
+        "wcag_level": "AA (Level 2.5.8)",
+        "recommendation": "Increase clickable/tappable area to minimum 44x44 pixels",
+        "how_to_fix": [
+          "Add CSS padding to increase the clickable area",
+          "Use min-width and min-height CSS properties",
+          "Ensure adequate spacing (at least 8px) between adjacent targets",
+          "Consider making the entire parent container clickable",
+          "Test on mobile devices with actual finger taps"
+        ]
+      }
+    }
+  ],
+  "elements_analyzed": 1,
+  "screenshot_path": "C:\\Users\\TestUser\\Documents\\GitHub\\a11yvision-backendnew\\data\\screenshots\\screenshot_3004286875144901776.png"
+}
