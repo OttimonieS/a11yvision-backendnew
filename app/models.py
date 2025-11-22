@@ -67,11 +67,12 @@ class Issue(Base):
     id = Column(String, primary_key=True, index=True)
     scan_id = Column(String, ForeignKey("scans.scan_id"), nullable=False)
     rule = Column(String, nullable=False)
-    wcag = Column(String, nullable=True)
+    wcag = Column(JSON, nullable=True)  # Store as array of WCAG criteria
     severity = Column(String, nullable=False)  # critical, serious, minor
     confidence = Column(Float, nullable=False)
     message = Column(Text, nullable=False)
-    bbox = Column(JSON, nullable=True)  # Store as JSON: [x, y, w, h] or {x, y, w, h}
+    bbox = Column(JSON, nullable=True)  # Store as JSON: {x, y, w, h}
+    details = Column(JSON, nullable=True)  # Enhanced details: element info, colors, recommendations, how_to_fix
     created_at = Column(DateTime, default=datetime.utcnow)
 
     # Relationships
