@@ -124,88 +124,121 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 	"""Render the URL in a headless browser, take a screenshot, run analysis heuristics.
 	Returns a dict with url, issues, and screenshot path (if saved to disk).
 	"""
-	out_dir = out_dir or Path.cwd() / "data" / "screenshots"
-	out_dir.mkdir(parents=True, exist_ok=True)
+	import traceback
+	
+	try:
+		out_dir = out_dir or Path.cwd() / "data" / "screenshots"
+		out_dir.mkdir(parents=True, exist_ok=True)
+	except Exception as e:
+		print(f"Error creating output directory: {e}")
+		raise Exception(f"Failed to create output directory: {str(e)}")
 
-	with sync_playwright() as p:
-		browser = p.chromium.launch(headless=True)
-		context = browser.new_context(viewport={'width': 1280, 'height': 800})
-		page = context.new_page()
-		page.goto(url, timeout=30000)
-		page.wait_for_load_state('networkidle', timeout=10000)
+	try:
+		with sync_playwright() as p:
+	try:
+		with sync_playwright() as p:
+			browser = p.chromium.launch(headless=True)
+			context = browser.new_context(viewport={'width': 1280, 'height': 800})
+			page = context.new_page()
+			
+			# Navigate to URL
+			try:
+				page.goto(url, timeout=30000)
+				page.wait_for_load_state('networkidle', timeout=10000)
+			except Exception as e:
+				print(f"Error loading page {url}: {e}")
+				# Continue with what we have
+				pass
 
-		# Extract page elements for detailed analysis
-		page_elements = extract_page_elements(page)
+			# Extract page elements for detailed analysis
+			page_elements = extract_page_elements(page)
 
-		# Get page metadata
-		page_info = page.evaluate("""
-			() => ({
-				title: document.title,
-				url: window.location.href,
-				lang: document.documentElement.lang || 'not specified',
-				viewport: {
-					width: window.innerWidth,
-					height: window.innerHeight,
-					scrollHeight: document.documentElement.scrollHeight
+			# Get page metadata
+			try:
+				page_info = page.evaluate("""
+					() => ({
+						title: document.title,
+						url: window.location.href,
+						lang: document.documentElement.lang || 'not specified',
+						viewport: {
+							width: window.innerWidth,
+							height: window.innerHeight,
+							scrollHeight: document.documentElement.scrollHeight
+						}
+					})
+				""")
+			except Exception as e:
+				print(f"Error extracting page info: {e}")
+				page_info = {
+					'title': 'Unknown',
+					'url': url,
+					'lang': 'not specified',
+					'viewport': {'width': 1280, 'height': 800, 'scrollHeight': 800}
 				}
-			})
-		""")
 
-		# full page screenshot
-		buffer = page.screenshot(full_page=True)
-		img = Image.open(BytesIO(buffer))
+			# full page screenshot
+			buffer = page.screenshot(full_page=True)
+			img = Image.open(BytesIO(buffer))
 
-		# Run analysis
-		issues = analyze_image(img, page_elements)
+			# Run analysis
+			issues = analyze_image(img, page_elements)
 
-		# Enrich issues with element information
-		issues = enrich_issues_with_elements(issues, page_elements)
+			# Enrich issues with element information
+			issues = enrich_issues_with_elements(issues, page_elements)
 
-		# save screenshot
-		screenshot_path = out_dir / f"screenshot_{abs(hash(url))}.png"
-		with open(screenshot_path, 'wb') as f:
-			f.write(buffer)
+			# save screenshot
+			screenshot_path = out_dir / f"screenshot_{abs(hash(url))}.png"
+			with open(screenshot_path, 'wb') as f:
+				f.write(buffer)
 
-		# Save detailed report
-		report_path = out_dir / f"report_{abs(hash(url))}.json"
-		with open(report_path, 'w', encoding='utf-8') as f:
-			json.dump({
-				'url': url,
-				'page_info': page_info,
-				'issues': issues,
-				'elements_analyzed': len(page_elements),
-				'screenshot_path': str(screenshot_path)
-			}, f, indent=2, ensure_ascii=False)
+			# Save detailed report
+			report_path = out_dir / f"report_{abs(hash(url))}.json"
+			with open(report_path, 'w', encoding='utf-8') as f:
+				json.dump({
+					'url': url,
+					'page_info': page_info,
+					'issues': issues,
+					'elements_analyzed': len(page_elements),
+					'screenshot_path': str(screenshot_path)
+				}, f, indent=2, ensure_ascii=False)
 
-		# Generate annotated screenshot with issue markers
-		annotated_path = None
-		html_report_path = None
-		try:
-			annotated_path = draw_issue_overlay(str(screenshot_path), issues)
+			# Generate annotated screenshot with issue markers
+			annotated_path = None
+			html_report_path = None
+			try:
+				annotated_path = draw_issue_overlay(str(screenshot_path), issues)
 
-			# Generate HTML report
-			html_report = generate_issue_report_html(issues, str(screenshot_path), page_info)
-			html_report_path = out_dir / f"report_{abs(hash(url))}.html"
-			with open(html_report_path, 'w', encoding='utf-8') as f:
-				f.write(html_report)
-		except Exception as e:
-			print(f"Error generating visualizations: {e}")
+				# Generate HTML report
+				html_report = generate_issue_report_html(issues, str(screenshot_path), page_info)
+				html_report_path = out_dir / f"report_{abs(hash(url))}.html"
+				with open(html_report_path, 'w', encoding='utf-8') as f:
+					f.write(html_report)
+			except Exception as e:
+				print(f"Error generating visualizations: {e}")
+				import traceback
+				traceback.print_exc()
 
-		browser.close()
+			browser.close()
 
-	return {
-		'url': url,
-		'issues': issues,
-		'screenshotPath': str(screenshot_path),
-		'annotatedScreenshotPath': annotated_path,
-		'reportPath': str(report_path),
-		'htmlReportPath': str(html_report_path) if html_report_path else None,
-		'pageInfo': page_info,
-		'summary': {
-			'total_issues': len(issues),
-			'critical': sum(1 for i in issues if i.get('severity') == 'critical'),
-			'serious': sum(1 for i in issues if i.get('severity') == 'serious'),
-			'minor': sum(1 for i in issues if i.get('severity') == 'minor'),
-			'elements_analyzed': len(page_elements)
+		return {
+			'url': url,
+			'issues': issues,
+			'screenshotPath': str(screenshot_path),
+			'annotatedScreenshotPath': annotated_path,
+			'reportPath': str(report_path),
+			'htmlReportPath': str(html_report_path) if html_report_path else None,
+			'pageInfo': page_info,
+			'summary': {
+				'total_issues': len(issues),
+				'critical': sum(1 for i in issues if i.get('severity') == 'critical'),
+				'serious': sum(1 for i in issues if i.get('severity') == 'serious'),
+				'minor': sum(1 for i in issues if i.get('severity') == 'minor'),
+				'elements_analyzed': len(page_elements)
+			}
 		}
-	}
+	
+	except Exception as e:
+		print(f"Critical error in run_scan: {e}")
+		import traceback
+		traceback.print_exc()
+		raise Exception(f"Scan failed: {str(e)}. Please ensure Playwright browsers are installed (run: playwright install chromium)")
