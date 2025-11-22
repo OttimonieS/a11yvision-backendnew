@@ -46,7 +46,11 @@ def check_playwright():
     """Check if Playwright is installed."""
     try:
         import playwright
-        print(f"✅ Playwright is installed (version: {playwright.__version__})")
+        try:
+            from playwright import __version__
+            print(f"✅ Playwright is installed (version: {__version__})")
+        except:
+            print(f"✅ Playwright is installed")
         return True
     except ImportError:
         print("❌ Playwright is not installed")
@@ -55,8 +59,11 @@ def check_playwright():
 def check_opencv():
     """Check if OpenCV is installed."""
     try:
-        import cv2
-        print(f"✅ OpenCV is installed (version: {cv2.__version__})")
+        import cv2  # type: ignore
+        try:
+            print(f"✅ OpenCV is installed (version: {cv2.__version__})")
+        except:
+            print(f"✅ OpenCV is installed")
         return True
     except ImportError:
         print("❌ OpenCV (cv2) is not installed")

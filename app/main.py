@@ -251,10 +251,10 @@ async def get_scan_status(scan_id: str):
 	data = SCANS.get(scan_id)
 	if not data:
 		return {'scanId': scan_id, 'status': 'not_found'}
-	
+
 	# Make a copy to avoid modifying the original
 	response = dict(data)
-	
+
 	# summarize if results exist
 	result = data.get('result')
 	if result and 'issues' in result:
@@ -272,7 +272,7 @@ async def get_scan_status(scan_id: str):
 			'inference': 'done',
 			'aggregate': 'done',
 		}
-	
+
 	# If status is running, update progress to show activity
 	if data.get('status') == 'running':
 		response['progress'] = {
@@ -281,7 +281,7 @@ async def get_scan_status(scan_id: str):
 			'inference': 'pending',
 			'aggregate': 'pending',
 		}
-	
+
 	return response
 
 
@@ -340,7 +340,7 @@ async def health():
 async def debug_scans():
 	"""Debug endpoint to see all scans and their current state."""
 	import threading
-	
+
 	active_threads = [
 		{
 			'name': t.name,
@@ -350,7 +350,7 @@ async def debug_scans():
 		for t in threading.enumerate()
 		if 'ScanThread' in t.name
 	]
-	
+
 	scans_summary = []
 	for scan_id, scan_data in SCANS.items():
 		scans_summary.append({
@@ -362,7 +362,7 @@ async def debug_scans():
 			'createdAt': scan_data.get('createdAt'),
 			'updatedAt': scan_data.get('updatedAt'),
 		})
-	
+
 	return {
 		'totalScans': len(SCANS),
 		'activeThreads': active_threads,

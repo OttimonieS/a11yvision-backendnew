@@ -7,7 +7,9 @@ You reported: "When I start a scan, status shows 'running', but when I navigate 
 ## Possible Causes
 
 ### 1. **Backend Issue: Scan Actually Failing** (Most Likely)
+
 The scan is genuinely failing due to:
+
 - ✅ Playwright browsers not installed
 - ✅ Network timeouts
 - ✅ Invalid URL
@@ -15,18 +17,22 @@ The scan is genuinely failing due to:
 - ✅ Missing dependencies (cv2, numpy, etc.)
 
 ### 2. **Frontend Issue: Status Polling**
+
 - Frontend might not be polling correctly
 - Race condition in status updates
 - Caching issues
 
 ### 3. **Thread Termination** (Now Fixed)
+
 - ~~Background threads were daemon threads~~ ✅ Fixed
 - ~~Could terminate prematurely~~ ✅ Fixed
 
 ## What I Fixed
 
 ### 1. Enhanced Logging
+
 The backend now logs every step of the scan process:
+
 ```
 ============================================================
 Starting scan: abc-123-def
@@ -40,6 +46,7 @@ URL: https://example.com
 ```
 
 ### 2. Changed Thread Behavior
+
 ```python
 # Before: daemon=True (could terminate unexpectedly)
 t = threading.Thread(target=job, daemon=True)
@@ -49,19 +56,25 @@ t = threading.Thread(target=job, daemon=False, name=f"ScanThread-{scan_id[:8]}")
 ```
 
 ### 3. Added Debug Endpoint
+
 ```
 GET /api/v1/debug/scans
 ```
+
 Shows:
+
 - All scans and their status
 - Active scan threads
 - Error details
 
 ### 4. Created Diagnostic Tool
+
 ```bash
 python test_scan_status.py
 ```
+
 This tool:
+
 - Creates a test scan
 - Monitors status every 2 seconds
 - Shows status transitions
@@ -82,6 +95,7 @@ python test_scan_status.py
 ```
 
 **What it will show:**
+
 ```
 Step 1: Creating scan...
 ✅ Scan created: abc-123-def
@@ -95,7 +109,7 @@ Step 2: Monitoring status...
 
 ❌ SCAN FAILED!
    Error: Scan failed: Executable doesn't exist at /path/to/chromium
-   
+
    Error Details:
    Please ensure Playwright browsers are installed (run: playwright install chromium)
 ```
@@ -105,6 +119,7 @@ Step 2: Monitoring status...
 When you start a scan, watch the server console output:
 
 **If Playwright not installed:**
+
 ```
 [abc-123-def] Status set to 'running', calling run_scan...
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -114,6 +129,7 @@ Error: Executable doesn't exist at...
 ```
 
 **If successful:**
+
 ```
 [abc-123-def] Status set to 'running', calling run_scan...
 [abc-123-def] Scan completed successfully!
@@ -128,6 +144,7 @@ curl http://localhost:8000/api/v1/debug/scans | jq
 ```
 
 Response:
+
 ```json
 {
   "totalScans": 3,
@@ -160,6 +177,7 @@ curl http://localhost:8000/api/v1/scans/SCAN_ID | jq
 ```
 
 Look for:
+
 - `status`: "error"
 - `error`: The error message
 - `errorDetails`: Stack trace
@@ -185,26 +203,31 @@ python setup_playwright.py
 ## Is it Frontend or Backend?
 
 ### It's a BACKEND issue if:
-✅ `test_scan_status.py` shows the scan failing  
-✅ Server logs show errors  
-✅ Debug endpoint shows `"status": "error"`  
-✅ Error message mentions Playwright, permissions, or timeouts  
+
+✅ `test_scan_status.py` shows the scan failing
+✅ Server logs show errors
+✅ Debug endpoint shows `"status": "error"`
+✅ Error message mentions Playwright, permissions, or timeouts
 
 ### It's a FRONTEND issue if:
-❌ `test_scan_status.py` shows scan succeeding  
-❌ Server logs show "Scan completed successfully"  
-❌ Debug endpoint shows `"status": "done"`  
-❌ But frontend still shows "error"  
+
+❌ `test_scan_status.py` shows scan succeeding
+❌ Server logs show "Scan completed successfully"
+❌ Debug endpoint shows `"status": "done"`
+❌ But frontend still shows "error"
 
 ## Testing the Fix
 
 ### Test 1: Server-side test
+
 ```bash
 python test_scan_status.py
 ```
+
 Should show: `✅ SCAN COMPLETED SUCCESSFULLY!`
 
 ### Test 2: API test
+
 ```bash
 # Create scan
 SCAN_ID=$(curl -X POST http://localhost:8000/api/v1/scans \
@@ -217,9 +240,11 @@ sleep 10
 # Check status
 curl http://localhost:8000/api/v1/scans/$SCAN_ID | jq '.status'
 ```
+
 Should show: `"done"`
 
 ### Test 3: Frontend test
+
 1. Start server: `uvicorn main:app --reload`
 2. Open frontend
 3. Create a scan
@@ -232,6 +257,7 @@ Should show: `"done"`
 If the issue persists after running `setup_playwright.py`, please report:
 
 1. **Output of diagnostic tool:**
+
    ```bash
    python test_scan_status.py > scan_test_output.txt
    ```
@@ -239,6 +265,7 @@ If the issue persists after running `setup_playwright.py`, please report:
 2. **Server logs when creating a scan**
 
 3. **Debug endpoint output:**
+
    ```bash
    curl http://localhost:8000/api/v1/debug/scans > debug_output.json
    ```
@@ -253,11 +280,13 @@ If the issue persists after running `setup_playwright.py`, please report:
 **99% of the time**, scans fail because Playwright browsers aren't installed. The enhanced logging will now tell you exactly why it's failing.
 
 **Run this to fix:**
+
 ```bash
 python setup_playwright.py
 ```
 
 **Then test:**
+
 ```bash
 python test_scan_status.py
 ```

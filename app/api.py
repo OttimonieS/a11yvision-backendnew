@@ -13,30 +13,30 @@ def start_scan(scan_id: str, url: str, set_status: Callable[[str, dict], None]) 
         print(f"Starting scan: {scan_id}")
         print(f"URL: {url}")
         print(f"{'='*60}\n")
-        
+
         try:
             set_status(scan_id, {'status': 'running'})
             print(f"[{scan_id}] Status set to 'running', calling run_scan...")
-            
+
             res = run_scan(url)
-            
+
             print(f"[{scan_id}] Scan completed successfully!")
             print(f"[{scan_id}] Found {len(res.get('issues', []))} issues")
-            
+
             set_status(scan_id, {'status': 'done', 'result': res})
             print(f"[{scan_id}] Status set to 'done'")
-            
+
         except Exception as e:
             error_msg = str(e)
             error_trace = traceback.format_exc()
-            
+
             print(f"\n{'!'*60}")
             print(f"[{scan_id}] SCAN FAILED!")
             print(f"Error: {error_msg}")
             print(f"{'!'*60}")
             print(error_trace)
             print(f"{'!'*60}\n")
-            
+
             set_status(scan_id, {
                 'status': 'error',
                 'error': error_msg,
