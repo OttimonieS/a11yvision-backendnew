@@ -125,7 +125,7 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 	Returns a dict with url, issues, and screenshot path (if saved to disk).
 	"""
 	import traceback
-	
+
 	try:
 		out_dir = out_dir or Path.cwd() / "data" / "screenshots"
 		out_dir.mkdir(parents=True, exist_ok=True)
@@ -140,7 +140,7 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 			browser = p.chromium.launch(headless=True)
 			context = browser.new_context(viewport={'width': 1280, 'height': 800})
 			page = context.new_page()
-			
+
 			# Navigate to URL
 			try:
 				page.goto(url, timeout=30000)
@@ -236,7 +236,7 @@ def run_scan(url: str, out_dir: Path | None = None) -> Dict[str, Any]:
 				'elements_analyzed': len(page_elements)
 			}
 		}
-	
+
 	except Exception as e:
 		print(f"Critical error in run_scan: {e}")
 		import traceback

@@ -19,7 +19,7 @@ def start_scan(scan_id: str, url: str, set_status: Callable[[str, dict], None]) 
             print(f"Scan error for {scan_id}: {error_msg}")
             print(error_trace)
             set_status(scan_id, {
-                'status': 'error', 
+                'status': 'error',
                 'error': error_msg,
                 'errorDetails': error_trace[:500]  # Truncate for storage
             })

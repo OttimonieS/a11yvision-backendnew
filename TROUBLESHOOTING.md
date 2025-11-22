@@ -11,8 +11,9 @@ python setup_playwright.py
 ```
 
 This script will:
+
 - ✅ Check if Playwright is installed
-- ✅ Check if OpenCV is installed  
+- ✅ Check if OpenCV is installed
 - ✅ Install Chromium browser for Playwright
 - ✅ Install system dependencies (Linux)
 - ✅ Verify the installation works
@@ -51,6 +52,7 @@ uvicorn main:app --reload
 ```
 
 Look for errors like:
+
 - `Executable doesn't exist` - Playwright browsers not installed
 - `ImportError: cv2` - OpenCV not installed
 - `Permission denied` - File/directory permission issues
@@ -62,6 +64,7 @@ Look for errors like:
 **Cause:** Playwright browsers not installed
 
 **Solution:**
+
 ```bash
 playwright install chromium
 ```
@@ -71,6 +74,7 @@ playwright install chromium
 **Cause:** OpenCV not installed
 
 **Solution:**
+
 ```bash
 pip install opencv-python
 ```
@@ -80,6 +84,7 @@ pip install opencv-python
 **Cause:** Insufficient permissions for data directory
 
 **Solution:**
+
 ```bash
 # Create the directory manually
 mkdir -p data/screenshots
@@ -94,6 +99,7 @@ sudo chown -R $USER data/
 **Cause:** Network issues or firewall blocking
 
 **Solution:**
+
 - Check internet connection
 - Check firewall settings
 - Try with a different URL
@@ -141,6 +147,7 @@ pip install -r requirements.txt
 ```
 
 Required packages:
+
 - `fastapi`
 - `uvicorn`
 - `playwright`
@@ -165,14 +172,17 @@ ls -la data/
 ### Step 8: Environment-Specific Issues
 
 #### Windows
+
 - Run PowerShell as Administrator
 - Check Windows Defender isn't blocking Playwright
 
 #### Linux
+
 - Install system dependencies: `playwright install-deps chromium`
 - Check SELinux/AppArmor isn't blocking execution
 
 #### Docker/Railway
+
 - Ensure the Dockerfile includes Playwright installation
 - Add to Dockerfile:
   ```dockerfile
@@ -218,7 +228,7 @@ When everything works correctly:
 
 ```
 ✅ Playwright is installed
-✅ Chromium browser is installed  
+✅ Chromium browser is installed
 ✅ OpenCV is installed
 ✅ Test scan completed successfully
 ✅ Screenshot generated
