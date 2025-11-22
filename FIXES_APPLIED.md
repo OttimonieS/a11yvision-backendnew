@@ -119,9 +119,24 @@ python test_scan_status.py
 
 ## Next Steps
 
-Your backend is now fully functional. You can:
+Your backend is now fully functional and deployed at **api.a11yvision.labnexus.my.id**
 
-1. Start the server with `uvicorn`
-2. Connect your frontend
-3. Begin scanning websites
-4. All scan results will be saved to `data/screenshots/`
+### For Production (Deployed Server)
+Your frontend should connect to:
+```
+https://api.a11yvision.labnexus.my.id
+```
+
+### For Local Development
+```bash
+cd app
+python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+### API Endpoints
+- `POST /api/v1/scans` - Create new scan
+- `GET /api/v1/scans/{id}` - Get scan status and results
+- `GET /api/v1/debug/scans` - Debug endpoint (all scans)
+- `GET /screenshots/{filename}` - Access screenshot files
+
+All scan results will be saved to `data/screenshots/`
