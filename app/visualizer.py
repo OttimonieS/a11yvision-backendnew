@@ -1,14 +1,14 @@
 """
 Visualizer for accessibility issues - annotates screenshots with issue markers
 """
-import cv2
+import cv2  # type: ignore
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 
-def draw_issue_overlay(screenshot_path: str, issues: List[Dict[str, Any]], output_path: str = None) -> str:
+def draw_issue_overlay(screenshot_path: str, issues: List[Dict[str, Any]], output_path: Optional[str] = None) -> str:
     """
     Draw bounding boxes and labels on screenshot for all detected issues.
 
@@ -112,7 +112,7 @@ def draw_issue_overlay(screenshot_path: str, issues: List[Dict[str, Any]], outpu
 
 
 def generate_issue_report_html(issues: List[Dict[str, Any]], screenshot_path: str,
-                               page_info: Dict[str, Any] = None) -> str:
+                               page_info: Optional[Dict[str, Any]] = None) -> str:
     """
     Generate an HTML report for the accessibility issues.
 
